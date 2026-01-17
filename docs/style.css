@@ -1,0 +1,273 @@
+/* Dalston Rooftop Brewery - Shared Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2a2a2a;
+    background: #f5f1e8;
+}
+
+header {
+    background: linear-gradient(180deg, #ff8c42 0%, #ff6b35 50%, #1a2838 100%);
+    color: #f5f1e8;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(26, 40, 56, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.brew-meta-header {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: #ff8c42;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #ff6b35;
+}
+
+.intro {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(26, 40, 56, 0.1);
+    border-top: 4px solid #ff8c42;
+}
+
+.brews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.brew-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(26, 40, 56, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-top: 3px solid #d4a574;
+}
+
+.brew-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(26, 40, 56, 0.2);
+    border-top-color: #ff8c42;
+}
+
+.brew-card h2 {
+    color: #1a2838;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.brew-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.brew-style {
+    display: inline-block;
+    background: #d4c5a9;
+    color: #1a2838;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+.brew-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-bottled { background: #d4edda; color: #155724; }
+.status-fermenting { background: #ffeaa7; color: #856404; }
+.status-consumed { background: #f8d7da; color: #721c24; }
+
+.brew-pitch {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.brew-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.brew-details {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(26, 40, 56, 0.1);
+    margin-bottom: 2rem;
+    border-top: 4px solid #ff8c42;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #faf8f5;
+    border-radius: 8px;
+    border: 1px solid #d4c5a9;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ff8c42;
+}
+
+.section {
+    margin: 2rem 0;
+}
+
+.section h2 {
+    color: #1a2838;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #d4a574;
+    padding-bottom: 0.5rem;
+}
+
+.section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+    background: #faf8f5;
+    margin-bottom: 0.25rem;
+    border-radius: 4px;
+}
+
+.ingredients-list li:last-child {
+    border-bottom: none;
+}
+
+.variants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.variants-table th,
+.variants-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.variants-table th {
+    background: #1a2838;
+    color: #d4c5a9;
+    font-weight: 600;
+}
+
+.variants-table tr:hover {
+    background: #faf8f5;
+}
+
+.photo-placeholder {
+    background: linear-gradient(135deg, #d4c5a9 0%, #f5f1e8 100%);
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin: 2rem 0;
+    border: 2px dashed #d4a574;
+}
+
+.adjustments {
+    background: #fff9e6;
+    padding: 1rem;
+    border-left: 4px solid #ff8c42;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.adjustments ul {
+    margin: 0.5rem 0 0 1.5rem;
+}
+
+.consumed-note {
+    background: #ffe6e6;
+    padding: 1rem;
+    border-left: 4px solid #ff6b6b;
+    border-radius: 4px;
+    margin: 1rem 0;
+    color: #c92a2a;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    background: #1a2838;
+    color: #d4c5a9;
+}
