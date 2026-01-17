@@ -1,0 +1,277 @@
+{
+  "id": "blackberry-mead",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Blackberry Mead",
+  "public_note": "Spiced blackberry mead with lemon",
+  "private_note": "Recipe from Reddit r/mead: https://www.reddit.com/r/mead/comments/1exv97k/blackberry_mead_recipe_check/\n\nHot water infusion with spices and lemon, poured over mashed berries. Pectic enzyme added before yeast pitch. Staggered Fermaid O additions (24h, 48h, 72h, 1 week). Degas daily to prevent mold on fruit. Rack through cheesecloth after 1 week to remove fruit.",
+  "times_brewed": 0,
+  "serving_temperature": "10.00",
+  "water_amount": "3.80",
+  "kettle_water": "3.80",
+  "mashing": [
+    {
+      "mash_in_water": "3.80",
+      "sparge_in_water": null,
+      "steps": [
+        {
+          "duration": 15,
+          "temperature": "90.0",
+          "end_temperature": "65.0",
+          "order": 0
+        }
+      ],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Wildflower Honey",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1360.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Blackberries (mashed)",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "1150.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Allspice Seeds (cracked)",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "1.50",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Cloves (crushed)",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "1.50",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Lemon (chopped, half)",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "0.50",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        }
+      ],
+      "order": 0,
+      "name": "Hot water infusion with spices, poured over mashed berries"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Lalvin D-47",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "77.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 30.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation with fruit",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Pectic Enzyme",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "2.50",
+        "duration": 0.0,
+        "addition_step": "PRE-PITCH",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Go-Ferm (yeast rehydration)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "6.25",
+        "duration": 0.0,
+        "addition_step": "PRE-PITCH",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Fermaid O (24h addition)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.10",
+        "duration": 1.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Fermaid O (48h addition)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.10",
+        "duration": 2.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Fermaid O (72h addition)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.10",
+        "duration": 3.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Fermaid O (1 week addition)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.10",
+        "duration": 7.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "15.00",
+  "abv": "11.00",
+  "ibu": 0,
+  "kcal": "150.00",
+  "og": "1.105",
+  "fg": "1.020",
+  "modified_timestamp": 1737158400,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2026-01-17T00:00:00Z",
+    "modified": "2026-01-17T00:00:00Z",
+    "name": "Blackberry Mead",
+    "style": {
+      "id": null,
+      "name": "Melomel",
+      "blurb": "Spiced blackberry mead with warming aromatics",
+      "description": "A rich fruit mead featuring mashed blackberries infused with warming allspice and cloves, brightened with fresh lemon. The hot water infusion technique extracts maximum flavor from the spices before pouring over the fruit. Staggered nutrient additions and daily degassing ensure healthy fermentation. Lalvin D-47 yeast provides a clean, fruity profile.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}
