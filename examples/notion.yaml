@@ -1,0 +1,28 @@
+# Notion database IDs and URLs
+# Copy to notion.yaml in project root and fill in your values
+# The inventory skill can create these databases for you if needed
+
+ingredients_page: https://www.notion.so/your-ingredients-page-id
+
+databases:
+  fermentables:
+    url: https://www.notion.so/your-fermentables-db-id
+    data_source_id: your-fermentables-data-source-id
+  hops:
+    url: https://www.notion.so/your-hops-db-id
+    data_source_id: your-hops-data-source-id
+  yeast:
+    url: https://www.notion.so/your-yeast-db-id
+    data_source_id: your-yeast-data-source-id
+  flavoring:
+    url: https://www.notion.so/your-flavoring-db-id
+    data_source_id: your-flavoring-data-source-id
+  additives:
+    url: https://www.notion.so/your-additives-db-id
+    data_source_id: your-additives-data-source-id
+
+cellar:
+  url: https://www.notion.so/your-cellar-db-id
+  data_source_id: your-cellar-data-source-id
+
+naming_page: https://www.notion.so/your-naming-page-id

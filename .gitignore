@@ -1,6 +1,6 @@
 .tokens
 fetched/
-auth.yaml
-notion.yaml
+/auth.yaml
+/notion.yaml
 .cache/
 .claude/settings.local.json
