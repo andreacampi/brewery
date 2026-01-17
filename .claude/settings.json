@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(recipe-finder)",
+      "Bash(curl:*)",
+      "Bash(jq:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "mcp__notion__notion-fetch",
+      "mcp__notion__notion-search",
+      "mcp__notion__notion-create-pages",
+      "mcp__notion__notion-update-page",
+      "mcp__notion__notion-create-database",
+      "mcp__notion__notion-update-database",
+      "mcp__notion__notion-get-self"
+    ]
+  }
+}
