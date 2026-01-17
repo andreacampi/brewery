@@ -37,3 +37,56 @@ Each recipe contains:
 
 See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md](shopping-list.md) for ingredients to buy.
 
+## Marketing Website (GitHub Pages)
+
+**Location:** `docs/` directory
+
+**IMPORTANT:** The `docs/` directory contains DERIVED content generated from authoritative sources (batches.md, brew-notes.md, recipes/*.json). Never use it as reference material.
+
+### Structure
+
+```
+docs/
+├── index.html           # List of all brews
+├── style.css            # Shared stylesheet
+└── {batch-slug}/
+    └── index.html       # Individual batch page
+```
+
+### Design Rules
+
+**Color Palette (from brewery logo):**
+- Navy blue: `#1a2838`
+- Warm beige: `#d4c5a9`
+- Sunset orange: `#ff8c42`, `#ff6b35`
+- Background: `#f5f1e8`
+
+**Visual Distinctions:**
+- Meads: 🍯 emoji + warm beige gradient background
+- Beers: 🍺 emoji + slight orange gradient background
+
+### Content Rules
+
+**Index Page:**
+- Only show bottled brews (exclude fermenting batches)
+- Display: ABV, Brew date, Bottling date
+- No IBU for meads (only for beers)
+- Status badges: Only "Gone!" for consumed batches (no "Bottled" badges)
+
+**Detail Pages:**
+- Stats: ABV only (no OG, FG, or Status)
+- No "Brewing Details" section
+- Ingredients section:
+  - Remove all quantities (grams, counts, volumes)
+  - Remove water
+  - Remove yeast nutrients
+  - Remove fining agents
+  - Remove obvious processing details (e.g., "steeped")
+  - Keep descriptive details that add flavor context (e.g., "caramelized", "with zest")
+  - Use simple headings: "Ingredients" not "Key Ingredients"
+
+**Tone:**
+- Simple, friendly language
+- Focus on flavor and character, not technical brewing data
+- Marketing-focused, not brewer-focused
+
