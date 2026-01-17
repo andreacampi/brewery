@@ -1,0 +1,179 @@
+# Future Brews
+
+## Expiring Ingredients to Use
+
+*Only showing ingredients expiring within 4 months or already expired. Check Notion inventory for full expiration dates.*
+
+- [ ] Extra Pale Malt (expires 2026-02-01) → Double Hazy Jane
+- [ ] Safale US-05 - 22g (expired 2024-01-31) → Double Hazy Jane
+- [ ] WHC Bond - 11g (expired 2025-06-30) → SMaSHing BoB
+
+## Double Hazy Jane (BREWING)
+
+**Source**: `1443929.json` | **Style**: Double NEIPA
+**Status**: Started 2026-01-04, currently in Secondary (day 13). Cold crash ~Jan 22, bottling ~Jan 27.
+
+### Stats
+| ABV | IBU | SRM | OG | FG | kcal |
+|-----|-----|-----|----|----|------|
+| 9.04% | 13 | 8 | 1.081 | 1.016 | 272 |
+
+### Grain Bill (two mash stages, 60 min @ 66°C each)
+| Ingredient | Amount |
+|------------|--------|
+| Pale Malt | 1130g |
+| Maris Otter Pale Ale Malt | 1010g |
+| MB - Wheat Malt | 120g |
+| MB - Oats flaked | 100g |
+| Rice Hulls | 80g |
+
+### Boil (55 min)
+| Hop | Amount | Time |
+|-----|--------|------|
+| Chinook | 8g | 10 min |
+| Simcoe | 8g | 0 min (flameout) |
+| Chinook | 8g | 0 min (flameout) |
+| Amarillo | 8g | 0 min (flameout) |
+
+### Fermentation
+- **Yeast**: SafAle US-05 (5.5g)
+- **Primary**: 12 days @ 20°C
+- **Secondary**: 5 days @ 14°C (dry hop here)
+- **Cold crash**: 5 days @ 5°C
+
+### Dry Hops (in hop spider during secondary)
+| Hop | Amount |
+|-----|--------|
+| Amarillo | 16g |
+| Citra | 16g |
+| Mosaic | 16g |
+| Simcoe | 16g |
+
+### Notes
+- Substitute Pale Malt with Extra Pale Malt (1130g) to use expiring stock
+- Uses expiring Maris Otter (1010g) from inventory
+- US-05 yeast is expired but may still work with reduced viability - consider pitching extra or using fresh pack
+
+---
+
+## SMaSHing BoB (Citra SMaSH)
+
+**Source**: `1139286.json` | **Brewer**: Robert Hilbrands (BoB)
+
+### Stats
+| ABV | IBU | SRM | OG | FG | kcal |
+|-----|-----|-----|----|----|------|
+| 6.01% | 60 | 8 | 1.056 | 1.011 | 181 |
+
+### Grain Bill (60 min @ 63°C, 5 min @ 78°C)
+| Ingredient | Amount |
+|------------|--------|
+| Crisp Best Ale | 1815g |
+
+### Boil (30 min)
+| Hop | Amount | Time |
+|-----|--------|------|
+| Citra | 7g | 30 min |
+| Citra | 7g | 15 min |
+| Citra | 7g | 5 min |
+| Citra | 7g | 0 min (flameout) |
+
+### Fermentation
+- **Yeast**: WHC Bond (11g)
+- **Primary**: 4 days @ 19°C, then 1 day @ 22°C
+- **Secondary**: 1 day @ 18°C, 2 days @ 14°C
+- **Cold crash**: 2 days @ 5°C
+
+### Notes
+- Uses expiring Crisp Best Ale (1815g) and expired WHC Bond yeast
+- Universal recipe - can swap Citra for Cascade, Mosaic, Simcoe, or Amarillo
+- Target 50-70 IBU, adjust hop amounts based on alpha acid %
+
+---
+
+## Münchner Helles
+
+**Source**: `1322070.json` | **Brewer**: Mark
+
+### Stats
+| ABV | IBU | SRM | OG | FG | kcal |
+|-----|-----|-----|----|----|------|
+| 4.67% | 21 | 6 | 1.047 | 1.012 | 141 |
+
+### Grain Bill (5 min @ 64°C, 65 min @ 70°C, 15 min @ 78°C)
+| Ingredient | Amount |
+|------------|--------|
+| Pilsner Malt | 1350g |
+| Wheat Malt | 50g |
+| Munich Malt | 50g |
+
+### Boil (75 min)
+| Hop | Amount | Time |
+|-----|--------|------|
+| Hallertauer Mittelfrüh | 8g | 60 min |
+| Hallertauer Mittelfrüh | 6g | 10 min |
+
+### Fermentation
+- **Yeast**: WHC Blitz Lager (11g)
+- **Primary**: 2 days @ 12°C, then 3 days @ 14°C
+- **Secondary**: 6 days @ 12°C
+- **Lagering**: 15 days @ 5°C
+
+### Notes
+- Uses expiring Pilsner Malt (1350g) from inventory
+- WHC Blitz Lager substitutes for SafLager W-34/70
+- Need to buy: Wheat Malt, Munich Malt (see shopping list)
+
+---
+
+## 4 Day Kveik IPA
+
+**Source**: `648432.json` | **Brewer**: PeRo Incognito
+
+### Stats
+| ABV | IBU | SRM | OG | FG | kcal |
+|-----|-----|-----|----|----|------|
+| 6.04% | 22 | 6 | 1.055 | 1.010 | 182 |
+
+### Grain Bill (60 min @ 65°C)
+| Ingredient | Amount |
+|------------|--------|
+| Pilsner Malt | 1100g |
+| Flaked Oats | 385g |
+| Caramel Pils | 151g |
+| Lactose | 151g |
+| Melanoidin Malt | 82g |
+
+### Boil (60 min)
+| Hop | Amount | Time |
+|-----|--------|------|
+| Cascade | 9g | 60 min |
+| Vic Secret | 14g | 0 min (flameout) |
+| Citra | 21g | 0 min (flameout) |
+
+### Dry Hops
+| Hop | Amount |
+|-----|--------|
+| Citra | 40g |
+| Vic Secret | 10g |
+| Galaxy | 4g |
+
+### Fermentation
+- **Yeast**: Voss Kveik (5g)
+- **Primary**: 2 days @ 35°C
+- **Conditioning**: 1 day @ 35°C
+- Done in ~4 days!
+
+### Notes
+- Fast turnaround thanks to Kveik's high temp tolerance
+- Uses Lactose for body and Honey Malt for sweetness
+- Heavy dry hop for juicy NEIPA character
+
+---
+
+## Consider for the Future
+
+Recipes that look interesting but need ingredients we don't have yet:
+
+- **HJCN: Hazy Juicy Citrusy NEIPA** (`909974.json`) - needs Wheat Malt, Columbus, WHC Hop Unlock
+- **Traditional Bock (Dunkles Bock)** (`1411099.json`) - needs Munich Type II, Cara-pils, Special W, Munich Malt, SafLager W-34/70
