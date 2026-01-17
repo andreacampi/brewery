@@ -1,0 +1,179 @@
+{
+  "id": "ancient-orange-mead",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Ancient Orange Mead",
+  "public_note": "Based on Joe's Ancient Orange recipe",
+  "private_note": "Recipe: https://www.homebrewtalk.com/threads/joes-ancient-orange-mead.49106/",
+  "times_brewed": 1,
+  "serving_temperature": "10.00",
+  "water_amount": "3.00",
+  "kettle_water": "3.00",
+  "mashing": [
+    {
+      "mash_in_water": "3.00",
+      "sparge_in_water": null,
+      "steps": [],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1360.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Orange (half)",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "0.50",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Clementines",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "3.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Cinnamon Stick",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "1.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Calcium Bentonite",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "3.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "order": 0,
+      "name": "Must preparation"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Mead Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "90.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 90.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "8.00",
+  "abv": "18.67",
+  "ibu": 0,
+  "kcal": "240.00",
+  "og": "1.150",
+  "fg": "1.0025",
+  "modified_timestamp": 1708732800,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2025-02-23T00:00:00Z",
+    "modified": "2025-02-23T00:00:00Z",
+    "name": "Ancient Orange Mead",
+    "style": {
+      "id": null,
+      "name": "Traditional Mead",
+      "blurb": "Classic honey wine with citrus and spice",
+      "description": "A traditional mead based on Joe's Ancient Orange recipe, featuring whole citrus fruit with zest and warming cinnamon spice.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}

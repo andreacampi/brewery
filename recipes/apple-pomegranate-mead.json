@@ -1,0 +1,195 @@
+{
+  "id": "apple-pomegranate-mead",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Apple Pomegranate Mead",
+  "public_note": "Fruit mead with apple and pomegranate",
+  "private_note": "Stabilized with Campden tablet before backsweetening with 98g honey (target 1.020). WARNING: This batch developed explosive pressure over time - consider using potassium sorbate or pasteurization before backsweetening in future batches.",
+  "times_brewed": 1,
+  "serving_temperature": "10.00",
+  "water_amount": "5.00",
+  "kettle_water": "5.00",
+  "mashing": [
+    {
+      "mash_in_water": "5.00",
+      "sparge_in_water": null,
+      "steps": [],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey (raw)",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1470.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Apple",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "235.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Pomegranate",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "225.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "order": 0,
+      "name": "Must preparation"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "92.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 10.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "FERM",
+        "ingredient_name": "Honey (backsweetening)",
+        "ingredient_dry_yield": "100.00",
+        "ingredient_moisture": "17.00",
+        "ingredient_attenuation": null,
+        "amount": "98.00",
+        "duration": 0.0,
+        "addition_step": "POST-FERMENTATION",
+        "alpha_acid": null,
+        "srm": "2.00",
+        "amount_units": "GR",
+        "fermentable_type": "SUG"
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Campden Tablet",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.00",
+        "duration": 0.0,
+        "addition_step": "POST-FERMENTATION",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "UNIT",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Yeast Nutrients",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "5.00",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "8.00",
+  "abv": "14.00",
+  "ibu": 0,
+  "kcal": "180.00",
+  "og": "1.120",
+  "fg": "1.012",
+  "modified_timestamp": 1705622400,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2024-01-19T00:00:00Z",
+    "modified": "2024-01-19T00:00:00Z",
+    "name": "Apple Pomegranate Mead",
+    "style": {
+      "id": null,
+      "name": "Melomel",
+      "blurb": "Fruit mead with apple and pomegranate",
+      "description": "A strong fruit mead combining the tartness of pomegranate with the crisp character of apple. Backsweetened for balance and body. Note: This batch developed significant carbonation over time - handle with care and consider stabilizing before backsweetening in future batches.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}

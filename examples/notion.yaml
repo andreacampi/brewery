@@ -24,5 +24,3 @@ databases:
 cellar:
   url: https://www.notion.so/your-cellar-db-id
   data_source_id: your-cellar-data-source-id
-
-naming_page: https://www.notion.so/your-naming-page-id

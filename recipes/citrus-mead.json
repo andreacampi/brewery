@@ -1,0 +1,180 @@
+{
+  "id": "citrus-mead",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Citrus Mead",
+  "public_note": "",
+  "private_note": "Custom recipe - Wilton Way base",
+  "times_brewed": 3,
+  "serving_temperature": "10.00",
+  "water_amount": "3.00",
+  "kettle_water": "3.00",
+  "mashing": [
+    {
+      "mash_in_water": "3.00",
+      "sparge_in_water": null,
+      "steps": [],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1360.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey (Caramelized)",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "300.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "15.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Lemons",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "2.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Calcium Bentonite",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "5.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "order": 0,
+      "name": "Must preparation"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Mangrove Jack's Mead Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "90.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 60.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Mead Yeast Nutrients",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "2.50",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "5.00",
+  "abv": "14.00",
+  "ibu": 0,
+  "kcal": "180.00",
+  "og": "1.105",
+  "fg": "0.992",
+  "modified_timestamp": 1717862400,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2025-06-08T00:00:00Z",
+    "modified": "2025-06-08T00:00:00Z",
+    "name": "Citrus Mead",
+    "style": {
+      "id": null,
+      "name": "Traditional Mead",
+      "blurb": "Honey wine with citrus",
+      "description": "A traditional mead made with honey and fresh lemons, featuring bright citrus notes balanced with honey sweetness.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": true,
+  "favourite_amount": 0
+}

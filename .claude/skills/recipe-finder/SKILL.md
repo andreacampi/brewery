@@ -10,8 +10,12 @@ Search the beer recipe collection by various criteria.
 
 ## Data Structure
 
+**Community recipes** (MiniBrew cache):
 - **`.cache/recipes/recipes.json`** - Collection with metadata only: id, beer_name, ibu, abv, style
 - **`.cache/recipes/{id}.json`** - Individual recipe files with full details including ingredients
+
+**Custom recipes** (our own):
+- **`recipes/{name}.json`** - Custom recipes (mead, beer, etc.) in same format as community recipes
 
 ## Quick Filters (metadata)
 
@@ -33,14 +37,17 @@ jq '.results[] | select((.abv | tonumber) < 6) | {id, beer_name, abv}' .cache/re
 For ingredient searches, use grep first to find candidates efficiently:
 
 ```bash
-# Find recipes containing US-05 yeast
-grep -l "US-05" .cache/recipes/[0-9]*.json
+# Find recipes containing US-05 yeast (search both community and custom)
+grep -l "US-05" .cache/recipes/[0-9]*.json recipes/*.json
 
 # Find recipes with a specific fermentable
-grep -l "Maris Otter" .cache/recipes/[0-9]*.json
+grep -l "Maris Otter" .cache/recipes/[0-9]*.json recipes/*.json
+
+# Find recipes with honey (for mead)
+grep -l "Honey" recipes/*.json
 
 # Find recipes with a specific hop
-grep -l "Mosaic" .cache/recipes/[0-9]*.json
+grep -l "Mosaic" .cache/recipes/[0-9]*.json recipes/*.json
 ```
 
 Then use jq on matched files for details:

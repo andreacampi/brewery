@@ -1,0 +1,195 @@
+{
+  "id": "ridley-road",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Ridley Road",
+  "public_note": "Spicy ginger mead with jalapeño and vanilla variants",
+  "private_note": "Backsweetened with 330g honey after primary fermentation (target 1.025). Variants: jalapeño or vanilla extract added during secondary.",
+  "times_brewed": 1,
+  "serving_temperature": "10.00",
+  "water_amount": "5.00",
+  "kettle_water": "5.00",
+  "mashing": [
+    {
+      "mash_in_water": "5.00",
+      "sparge_in_water": null,
+      "steps": [],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1360.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Ginger",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "23.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "order": 0,
+      "name": "Must preparation"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "90.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 77.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "SEC",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 9.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 1,
+      "name": "Secondary fermentation (backsweetened)",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "FERM",
+        "ingredient_name": "Honey (backsweetening)",
+        "ingredient_dry_yield": "100.00",
+        "ingredient_moisture": "17.00",
+        "ingredient_attenuation": null,
+        "amount": "330.00",
+        "duration": 0.0,
+        "addition_step": "1-0",
+        "alpha_acid": null,
+        "srm": "2.00",
+        "amount_units": "GR",
+        "fermentable_type": "SUG"
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Jalapeños (variant)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.00",
+        "duration": 0.0,
+        "addition_step": "1-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "UNIT",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Vanilla Extract (variant)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "5.00",
+        "duration": 0.0,
+        "addition_step": "1-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "ML",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "4.00",
+  "abv": "12.00",
+  "ibu": 0,
+  "kcal": "160.00",
+  "og": "1.090",
+  "fg": "1.015",
+  "modified_timestamp": 1717891200,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2024-06-09T00:00:00Z",
+    "modified": "2024-06-09T00:00:00Z",
+    "name": "Ridley Road",
+    "style": {
+      "id": null,
+      "name": "Spiced Mead",
+      "blurb": "Ginger mead with experimental spicy variants",
+      "description": "A warming ginger mead with a semi-sweet finish from backsweetening. Experimental variants include jalapeño for heat and vanilla for smoothness. The ginger provides a spicy backbone while the honey sweetness balances the bite.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}

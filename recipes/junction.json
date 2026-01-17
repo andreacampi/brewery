@@ -1,0 +1,165 @@
+{
+  "id": "junction",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Junction",
+  "public_note": "Basic mead with berry variants",
+  "private_note": "Recipe from Self-sufficiency book: 1.4kg honey with 4.5L water total. Some bottles experimentally enhanced with frozen berries (35g) and backsweetening (~5g/half liter) during maturation.",
+  "times_brewed": 1,
+  "serving_temperature": "10.00",
+  "water_amount": "4.50",
+  "kettle_water": "4.50",
+  "mashing": [
+    {
+      "mash_in_water": "4.50",
+      "sparge_in_water": null,
+      "steps": [],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1400.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        }
+      ],
+      "order": 0,
+      "name": "Must preparation"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "80.00",
+          "amount": "6.50",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 75.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Frozen Berries (variant)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "35.00",
+        "duration": 0.0,
+        "addition_step": "POST-FERMENTATION",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "FERM",
+        "ingredient_name": "Honey (backsweetening, variant)",
+        "ingredient_dry_yield": "100.00",
+        "ingredient_moisture": "17.00",
+        "ingredient_attenuation": null,
+        "amount": "20.00",
+        "duration": 0.0,
+        "addition_step": "POST-FERMENTATION",
+        "alpha_acid": null,
+        "srm": "2.00",
+        "amount_units": "GR",
+        "fermentable_type": "SUG"
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Yeast Nutrients",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "6.50",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "2.00",
+  "abv": "8.80",
+  "ibu": 0,
+  "kcal": "120.00",
+  "og": "1.085",
+  "fg": "1.020",
+  "modified_timestamp": 1699142400,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2023-11-05T00:00:00Z",
+    "modified": "2023-11-05T00:00:00Z",
+    "name": "Junction",
+    "style": {
+      "id": null,
+      "name": "Traditional Mead",
+      "blurb": "Basic honey wine with optional berry additions",
+      "description": "A straightforward traditional mead following the Self-sufficiency book recipe. Simple honey and water fermentation producing a clean, honey-forward profile at 8.8% ABV. Some bottles were experimentally enhanced with frozen berries and backsweetening during maturation.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}

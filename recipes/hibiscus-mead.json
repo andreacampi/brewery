@@ -1,0 +1,172 @@
+{
+  "id": "hibiscus-mead",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Hibiscus Mead",
+  "public_note": "Floral mead with warming spices",
+  "private_note": "Recipe: https://docs.google.com/document/d/1vfF_BclNYd3y0Vcdci6PjCBJitPpCUKDqjGwZmH5ByU/edit?usp=drivesdk",
+  "times_brewed": 1,
+  "serving_temperature": "10.00",
+  "water_amount": "4.00",
+  "kettle_water": "4.00",
+  "mashing": [
+    {
+      "mash_in_water": "4.00",
+      "sparge_in_water": null,
+      "steps": [
+        {
+          "duration": 120,
+          "temperature": "60.0",
+          "end_temperature": "60.0",
+          "order": 0
+        }
+      ],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "1320.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Hibiscus Flowers",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "120.00",
+          "duration": 120,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "order": 0,
+      "name": "Hibiscus infusion"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Mixed Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "82.00",
+          "amount": "3.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 270.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Ginger",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.00",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "UNIT",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Cinnamon",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.00",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "UNIT",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "10.00",
+  "abv": "11.81",
+  "ibu": 0,
+  "kcal": "160.00",
+  "og": "1.110",
+  "fg": "1.020",
+  "modified_timestamp": 1714089600,
+  "brewable": true,
+  "beer": {
+    "id": null,
+    "created": "2025-04-26T00:00:00Z",
+    "modified": "2025-04-26T00:00:00Z",
+    "name": "Hibiscus Mead",
+    "style": {
+      "id": null,
+      "name": "Traditional Mead",
+      "blurb": "Floral honey wine with warming spices",
+      "description": "A vibrant mead featuring hibiscus flowers steeped to create a beautiful ruby color and tart floral notes, balanced with honey sweetness and warming ginger and cinnamon.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}

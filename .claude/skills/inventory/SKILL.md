@@ -312,7 +312,7 @@ Tracks bottled homebrew inventory (see `notion.yaml` for database URL and ID):
 
 ## Naming Conventions
 
-Maps street names to brew types (e.g., "Junction" = Basic Mead). See `notion.yaml` for the naming page URL.
+Maps street names to brew types (e.g., "Junction" = Basic Mead). See `naming.md` for the full list.
 
 ## Known Limitations
 

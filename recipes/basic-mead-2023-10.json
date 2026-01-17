@@ -1,0 +1,150 @@
+{
+  "id": "basic-mead-2023-10",
+  "beer_id": null,
+  "shared": false,
+  "beer_name": "Basic Mead (October 2023)",
+  "public_note": "Early experimental low-ABV mead",
+  "private_note": "Early experimental batch - low honey ratio resulted in low strength (3.5% ABV). Used G.V. Johnson Spring 2023 honey. Fermentation stalled, required troubleshooting with apple addition. Historical record only - not recommended for reproduction.",
+  "times_brewed": 1,
+  "serving_temperature": "10.00",
+  "water_amount": "4.00",
+  "kettle_water": "4.00",
+  "mashing": [
+    {
+      "mash_in_water": "4.00",
+      "sparge_in_water": null,
+      "steps": [],
+      "ingredient_additions": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Honey (raw, G.V. Johnson Spring 2023)",
+          "ingredient_dry_yield": "100.00",
+          "ingredient_moisture": "17.00",
+          "ingredient_attenuation": null,
+          "amount": "750.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        }
+      ],
+      "order": 0,
+      "name": "Must preparation"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 0,
+      "hops": [],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": null,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Young's Dry Yeast",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "75.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 18.0,
+          "temperature": "18.0",
+          "end_temperature": "18.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Primary fermentation",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Young's Yeast Nutrient",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "1.25",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": null,
+        "ingredient_type": "ADJ",
+        "ingredient_name": "Apple (chopped, skin on)",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "0.50",
+        "duration": 0.0,
+        "addition_step": "0-0",
+        "alpha_acid": null,
+        "srm": null,
+        "amount_units": "UNIT",
+        "fermentable_type": null
+      }
+    ],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "2.00",
+  "abv": "3.50",
+  "ibu": 0,
+  "kcal": "80.00",
+  "og": "1.026",
+  "fg": "1.000",
+  "modified_timestamp": 1696291200,
+  "brewable": false,
+  "beer": {
+    "id": null,
+    "created": "2023-10-03T00:00:00Z",
+    "modified": "2023-10-03T00:00:00Z",
+    "name": "Basic Mead (October 2023)",
+    "style": {
+      "id": null,
+      "name": "Traditional Mead",
+      "blurb": "Early experimental low-strength mead",
+      "description": "An early meadmaking experiment that resulted in a low-ABV (3.5%) beverage. Fermentation stalled and required troubleshooting with apple addition. Not recommended for reproduction - kept for historical record only. Later batches like Junction used improved techniques and ratios.",
+      "category": {
+        "id": null,
+        "created": null,
+        "modified": null,
+        "name": "Mead",
+        "description": "Fermented honey beverages"
+      }
+    },
+    "brewer": {
+      "id": null,
+      "name": "Dalston Rooftop Brewery",
+      "image": null
+    }
+  },
+  "favourite": false,
+  "favourite_amount": 0
+}
