@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+      "Skill(inventory)",
       "Skill(recipe-finder)",
       "Bash(curl:*)",
       "Bash(jq:*)",

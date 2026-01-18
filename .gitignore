@@ -6,3 +6,6 @@ fetched/
 .claude/settings.local.json
 venv/
 output/
+
+# macOS
+.DS_Store
