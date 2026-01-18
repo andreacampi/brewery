@@ -51,7 +51,7 @@ class BreweryLabelGenerator:
     GAP = 10 * mm
     HEADER_HEIGHT = 8 * mm  # Reduced from 10mm
 
-    def __init__(self, batch_name, style, recipe_path, abv, url):
+    def __init__(self, batch_name, style, recipe_path, abv, url, lot_number=None):
         """
         Initialize the label generator.
 
@@ -61,12 +61,14 @@ class BreweryLabelGenerator:
             recipe_path: Path to recipe JSON file
             abv: ABV percentage as string (e.g., "11.81")
             url: URL to the product page
+            lot_number: Lot number (e.g., "LOT 098" or "LOT 098-A")
         """
         self.batch_name = batch_name
         self.style = style
         self.recipe_path = Path(recipe_path)
         self.abv = abv
         self.url = url
+        self.lot_number = lot_number
         self.ingredients = self.extract_ingredients()
 
     def extract_ingredients(self):
@@ -279,6 +281,19 @@ class BreweryLabelGenerator:
         c.setFont("Helvetica", 7)
         c.drawString(x + 5 * mm + abv_label_width, y_pos, f"{self.abv}%")
 
+        # Lot Number - if provided
+        if self.lot_number:
+            y_pos -= 3 * mm
+            c.setFillColor(self.NAVY_BLUE)
+            c.setFont("Helvetica-Bold", 8)
+            lot_label = "Lot: "
+            lot_label_width = c.stringWidth(lot_label, "Helvetica-Bold", 8)
+            c.drawString(x + 5 * mm, y_pos, lot_label)
+
+            c.setFillColor(self.DARK_GRAY)
+            c.setFont("Helvetica", 7)
+            c.drawString(x + 5 * mm + lot_label_width, y_pos, self.lot_number)
+
         # QR Code - use color from palette
         if self.QR_COLOR_MODE == 'cycle':
             qr_color = self.QR_COLORS[label_index % len(self.QR_COLORS)]
@@ -352,11 +367,16 @@ Examples:
         default=16,
         help='Number of labels to generate (default: 16, max: 16)'
     )
+    parser.add_argument(
+        '--lot',
+        type=str,
+        help='Lot number (e.g., LOT 098 or LOT 098-A for variants)'
+    )
 
     args = parser.parse_args()
 
     # Batch configuration
-    # Future: Could parse from batches.md automatically
+    # Future: Could parse from brew-log.md automatically
     batch_config = {
         'navarino-road': {
             'name': 'Navarino Road',
@@ -364,6 +384,7 @@ Examples:
             'recipe': 'recipes/hibiscus-mead.json',
             'abv': '11.81',
             'url': 'https://andreacampi.github.io/brewery/navarino-road/',
+            'lot': 'LOT 098',
         }
     }
 
@@ -385,13 +406,17 @@ Examples:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{args.batch}-labels.pdf"
 
+    # Determine lot number (CLI arg overrides config)
+    lot_number = args.lot or config.get('lot')
+
     # Generate labels
     generator = BreweryLabelGenerator(
         batch_name=config['name'],
         style=config['style'],
         recipe_path=recipe_path,
         abv=config['abv'],
-        url=config['url']
+        url=config['url'],
+        lot_number=lot_number
     )
 
     generator.generate_pdf(output_path, num_labels=args.labels)

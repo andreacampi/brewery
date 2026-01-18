@@ -33,6 +33,14 @@ Each recipe contains:
 - **While Fermenting**: Dry hop and adjunct additions
 - **Style/Brewer**: Beer style category and brewer profile info
 
+## Brew Tracking
+
+**Brew Log**: [brew-log.md](brew-log.md) - Authoritative record of all brews with lot numbers, including both metadata (stats, ingredients, pitch) and detailed day-by-day process logs.
+
+**Lot Number System**: Each brew is assigned a sequential lot number (LOT XXX) across all products for traceability. Bottling variants use letter suffixes (e.g., LOT 097-A, LOT 097-B).
+
+**Street Names**: Marketing names for specific brew types (e.g., "Wilton Way" for Citrus Mead, "Navarino Road" for Hibiscus Mead). See [naming.md](naming.md) for conventions.
+
 ## Planning
 
 See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md](shopping-list.md) for ingredients to buy.
@@ -41,7 +49,7 @@ See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md]
 
 **Location:** `docs/` directory
 
-**IMPORTANT:** The `docs/` directory contains DERIVED content generated from authoritative sources (batches.md, brew-notes.md, recipes/*.json). Never use it as reference material.
+**IMPORTANT:** The `docs/` directory contains DERIVED content generated from authoritative sources (brew-log.md, recipes/*.json). Never use it as reference material.
 
 ### Structure
 

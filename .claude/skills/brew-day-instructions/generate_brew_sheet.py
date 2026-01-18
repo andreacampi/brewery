@@ -20,8 +20,9 @@ from typing import Dict, List, Optional
 class BrewSheetGenerator:
     """Generate brew sheets from recipe JSON."""
 
-    def __init__(self, recipe_path: Path, extra_note: Optional[str] = None):
+    def __init__(self, recipe_path: Path, lot_number: Optional[str] = None, extra_note: Optional[str] = None):
         self.recipe_path = recipe_path
+        self.lot_number = lot_number
         self.extra_note = extra_note
 
         with open(recipe_path) as f:
@@ -294,9 +295,12 @@ class BrewSheetGenerator:
         if self.atten_min > 85:
             dry_note = " Expect a dry finish."
 
+        # Build header line with optional lot number
+        lot_prefix = f"**Lot:** {self.lot_number} | " if self.lot_number else ""
+
         markdown = f"""# {self.recipe_name}
 
-**Recipe:** {self.recipe_id} | **Batch:** {self.water_amount}L | **Style:** {self.style} | **OG:** {self.og:.3f} | **FG:** {self.fg_min:.3f}-{self.fg_max:.3f} | **ABV:** {self.abv_min:.1f}-{self.abv_max:.1f}%
+{lot_prefix}**Recipe:** {self.recipe_id} | **Batch:** {self.water_amount}L | **Style:** {self.style} | **OG:** {self.og:.3f} | **FG:** {self.fg_min:.3f}-{self.fg_max:.3f} | **ABV:** {self.abv_min:.1f}-{self.abv_max:.1f}%
 
 ## Ingredients
 
@@ -355,6 +359,8 @@ def main():
                        help='Generate PDF only (skip markdown)')
     parser.add_argument('--markdown-only', action='store_true',
                        help='Generate markdown only (skip PDF)')
+    parser.add_argument('--lot', type=str,
+                       help='Lot number for this brew (e.g., LOT 100)')
     parser.add_argument('--note', type=str,
                        help='Extra note to add to brew sheet')
 
@@ -373,7 +379,7 @@ def main():
         output_type = 'all'
 
     # Create generator
-    generator = BrewSheetGenerator(args.recipe, args.note)
+    generator = BrewSheetGenerator(args.recipe, args.lot, args.note)
 
     # Output files - use output/ directory
     output_dir = Path('output')
