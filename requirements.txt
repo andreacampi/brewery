@@ -1,0 +1,4 @@
+charset-normalizer==3.4.4
+pillow==12.1.0
+qrcode==8.2
+reportlab==4.4.9

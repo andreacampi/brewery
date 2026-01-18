@@ -4,3 +4,5 @@ fetched/
 /notion.yaml
 .cache/
 .claude/settings.local.json
+venv/
+output/
