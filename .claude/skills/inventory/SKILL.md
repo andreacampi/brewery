@@ -217,6 +217,18 @@ naming_page: <naming_page_url>  # optional, for bottle naming conventions
 
 Once setup is complete, read `notion.yaml` to get database IDs for operations below.
 
+## Error Handling: Notion API Timeouts
+
+**CRITICAL: If any Notion MCP request times out or fails:**
+
+1. Retry **AT MAXIMUM** once
+2. If the retry also fails, prompt the user to reconnect to the Notion MCP server
+3. **NEVER** try workarounds such as asking the user to paste information manually
+4. If you are in plan mode and cannot continue without Notion data, you **MUST** suggest to the user that you need to exit plan mode
+
+**Example user instruction when timeout occurs:**
+> "The Notion API request timed out. Please run the `/mcp` command to reconnect to the Notion server, then let me know when you're ready to retry."
+
 ## Ingredient Databases
 
 - **Fermentables** - grains, malts, sugars
