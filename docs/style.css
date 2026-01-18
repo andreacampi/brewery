@@ -77,7 +77,8 @@ header h1 {
     transition: transform 0.2s, box-shadow 0.2s;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
     border-top: 3px solid #d4a574;
 }
 
@@ -147,6 +148,7 @@ header h1 {
     color: #555;
     line-height: 1.6;
     margin-top: 1rem;
+    flex: 1;
 }
 
 .brew-stats {
