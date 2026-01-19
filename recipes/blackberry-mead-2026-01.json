@@ -4,14 +4,14 @@
   "shared": false,
   "beer_name": "Blackberry Mead (Jan 2026 Batch)",
   "public_note": "Spiced blackberry mead with lemon",
-  "private_note": "Recipe adapted from blackberry-mead.json based on available ingredients:\n- Honey: 1324g (97.4% of original 1360g)\n- Blackberries: 1132g (98.4% of original 1150g)\n- Yeast: Mangrove Jack's Mead Yeast M05 (substitute for Lalvin D-47) - higher attenuation (95-100% vs 77%), will ferment drier\n- Nutrient: Mangrove Jack Yeast Nutrient (substitute for Fermaid O) - 2g staggered additions\n- No Go-Ferm available - rehydrate yeast in plain water\n- Pectic Enzyme optional (may purchase before brewing)\n\nOriginal recipe from Reddit r/mead: https://www.reddit.com/r/mead/comments/1exv97k/blackberry_mead_recipe_check/\n\nHot water infusion with spices and lemon, poured over mashed berries. Pectic enzyme added before yeast pitch if available. Staggered nutrient additions (24h, 48h, 72h, 1 week). Degas daily to prevent mold on fruit. Rack through cheesecloth after 1 week to remove fruit.",
+  "private_note": "Recipe adapted from blackberry-mead.json based on available ingredients:\n- Scaled to 95% to fit fermenter volume\n- Water: 3.61L (95% of original 3.80L)\n- Honey: 1258g (92.5% of original 1360g)\n- Blackberries: 1075g (93.5% of original 1150g)\n- Yeast: Mangrove Jack's Mead Yeast M05 (substitute for Lalvin D-47) - higher attenuation (95-100% vs 77%), will ferment drier\n- Nutrient: Mangrove Jack Yeast Nutrient (substitute for Fermaid O) - 2g staggered additions\n- No Go-Ferm available - rehydrate yeast in plain water\n- Pectic Enzyme optional (may purchase before brewing)\n\nOriginal recipe from Reddit r/mead: https://www.reddit.com/r/mead/comments/1exv97k/blackberry_mead_recipe_check/\n\nHot water infusion with spices and lemon, poured over mashed berries. Pectic enzyme added before yeast pitch if available. Staggered nutrient additions (24h, 48h, 72h, 1 week). Degas daily to prevent mold on fruit. Rack through cheesecloth after 1 week to remove fruit.",
   "times_brewed": 0,
   "serving_temperature": "10.00",
-  "water_amount": "3.80",
-  "kettle_water": "3.80",
+  "water_amount": "3.61",
+  "kettle_water": "3.61",
   "mashing": [
     {
-      "mash_in_water": "3.80",
+      "mash_in_water": "3.61",
       "sparge_in_water": null,
       "steps": [
         {
@@ -29,7 +29,7 @@
           "ingredient_dry_yield": "100.00",
           "ingredient_moisture": "17.00",
           "ingredient_attenuation": null,
-          "amount": "1324.00",
+          "amount": "1258.00",
           "duration": null,
           "addition_step": "0-0",
           "alpha_acid": null,
@@ -44,7 +44,7 @@
           "ingredient_dry_yield": null,
           "ingredient_moisture": null,
           "ingredient_attenuation": null,
-          "amount": "1132.00",
+          "amount": "1075.00",
           "duration": null,
           "addition_step": "0-0",
           "alpha_acid": null,

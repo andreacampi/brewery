@@ -4,6 +4,51 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 100: Blackberry Mead
+
+**Lot Number**: LOT 100
+**Street Name**: TBD
+**Style**: Blackberry Mead (Melomel)
+**Recipe**: `blackberry-mead-2026-01.json` (custom)
+**Brewed**: 2026-01-18
+**Status**: Fermenting (Primary)
+
+### Adjustments from Base Recipe
+- Scaled to 95% to fit fermenter volume
+- Water: 3.61L (95% of 3.8L)
+- Honey: 1258g (reduced from 1324g)
+- Blackberries: 1075g (reduced from 1132g)
+- No pectic enzyme used
+
+### Pitch
+
+A rich fruit mead featuring mashed blackberries infused with warming allspice and cloves, brightened with fresh lemon. Hot water infusion extracts maximum flavor from the spices before pouring over the fruit. Mangrove Jack's M05 mead yeast provides high attenuation for a drier, wine-like finish with deep berry character and aromatic spice notes.
+
+### Stats
+- **ABV**: 10.5% (estimated)
+- **IBU**: 0
+- **OG**: 1.085
+- **FG**: 1.005 (estimated)
+
+### Key Ingredients
+- Honey (1258g)
+- Blackberries (1075g, mashed)
+- Allspice seeds (1.5, cracked)
+- Cloves (1.5, crushed)
+- Lemon (half, chopped)
+- Yeast: Mangrove Jack's Mead Yeast M05 (6g)
+
+### Brew Log
+
+- **2026-01-18**: Hot water infusion with allspice, cloves, and lemon. Poured over mashed blackberries. Cooled to 25°C (waited for <35°C before mixing). Let cool overnight.
+- **2026-01-19**: OG 1.085 (measured after sifting fruit out), pitched 6g Mangrove Jack's M05
+- **Expected 2026-01-20**: First nutrient addition (2g, 24h)
+- **Expected 2026-01-21**: Second nutrient addition (2g, 48h)
+- **Expected 2026-01-22**: Third nutrient addition (2g, 72h)
+- **Expected 2026-01-26**: Fourth nutrient addition (2g, 1 week), rack through cheesecloth to remove fruit
+
+---
+
 ## LOT 099: Double Hazy Jane
 
 **Lot Number**: LOT 099
@@ -343,5 +388,205 @@ A vibrant melomel bursting with the rich, fruity character of mixed berries comp
 - **2023-10-17**: Fermentation not visible for days. Aired and mixed half an apple (skin on, chopped)
 - **2023-10-21**: No visible fermentation, SG 1.000 (3.5% ABV), pH 3.5. Racked into bottles.
 - **2023-11-03**: Final rack
+
+---
+
+## LOT 082: Deorlaf's Tun
+
+**Lot Number**: LOT 082
+**Street Name**: Deorlaf's Tun
+**Style**: Pale Ale (Kveik)
+**Recipe**: None (recipe unknown)
+**Brewed**: Unknown
+**Status**: Bottled
+
+### Stats
+- **ABV**: 6%
+- **Quantity**: 5 bottles (500ml each)
+
+### Key Ingredients
+- Kveik yeast
+
+### Brew Log
+- **Date unknown**: Brewed and bottled
+- **2026-01-18**: Added to inventory (Beer #2)
+
+---
+
+## LOT 083: Deorlaf's Tun
+
+**Lot Number**: LOT 083
+**Street Name**: Deorlaf's Tun
+**Style**: Pale Ale (Kveik)
+**Recipe**: `1215345.json` (community - Snelle BoB Single hop - Kveik APA)
+**Brewed**: Unknown
+**Status**: Bottled
+
+### Stats
+- **ABV**: 6%
+- **Quantity**: 1 bottle (500ml)
+
+### Key Ingredients
+- Kveik yeast (Snelle Bob's recipe)
+
+### Brew Log
+- **Date unknown**: Brewed and bottled
+- **2026-01-18**: Added to inventory (Beer #2)
+
+---
+
+## LOT 085: Deorlaf's Tun
+
+**Lot Number**: LOT 085
+**Street Name**: Deorlaf's Tun
+**Style**: Pale Ale (Kveik)
+**Recipe**: None (no recipe file)
+**Brewed**: 2025-09-01
+**Status**: Bottled
+
+### Stats
+- **ABV**: 6%
+- **Quantity**: 4 bottles (500ml each)
+
+### Key Ingredients
+- Kveik yeast
+
+### Brew Log
+- **2025-09-01**: Brewed and bottled (approximate date)
+- **2026-01-18**: Added to inventory (Beer #1)
+
+---
+
+## LOT 084: Deorlaf's Tun
+
+**Lot Number**: LOT 084
+**Street Name**: Deorlaf's Tun
+**Style**: Pale Ale (Kveik)
+**Recipe**: None (no recipe file)
+**Brewed**: 2025-11-01
+**Status**: Bottled
+
+### Stats
+- **ABV**: 6%
+- **Quantity**: 4 bottles (500ml each)
+
+### Key Ingredients
+- Kveik yeast
+
+### Brew Log
+- **2025-11-01**: Brewed and bottled (approximate date)
+- **2026-01-18**: Added to inventory (Beer #1)
+
+---
+
+## LOT 086: Deorlaf's Tun
+
+**Lot Number**: LOT 086
+**Street Name**: Deorlaf's Tun
+**Style**: Pale Ale (Kveik)
+**Recipe**: None (no recipe file)
+**Brewed**: 2025-09-01
+**Status**: Bottled
+
+### Stats
+- **ABV**: 6%
+- **Quantity**: 4 bottles (500ml each)
+
+### Key Ingredients
+- Kveik yeast
+
+### Brew Log
+- **2025-09-01**: Brewed and bottled (approximate date)
+- **2026-01-18**: Added to inventory
+- **Note**: Botched batch - paused process at higher temperature and added yeast much later. Still passable.
+
+---
+
+## LOT 090: Fenton Close
+
+**Lot Number**: LOT 090
+**Street Name**: Fenton Close
+**Style**: Ginger Beer
+**Recipe**: None (no recipe file)
+**Brewed**: 2025-11-01
+**Status**: Bottled
+
+### Stats
+- **ABV**: 0% (non-alcoholic)
+- **Quantity**: 4 bottles (500ml each)
+
+### Key Ingredients
+- Ginger
+
+### Brew Log
+- **2025-11-01**: Brewed and bottled
+- **2026-01-18**: Added to inventory (Soft Drinks #1)
+
+---
+
+## LOT 089: Fenton Close
+
+**Lot Number**: LOT 089
+**Street Name**: Fenton Close
+**Style**: Ginger Beer
+**Recipe**: None (no recipe file)
+**Brewed**: 2025-09-01
+**Status**: Bottled
+
+### Stats
+- **ABV**: 0% (non-alcoholic)
+- **Quantity**: 1 bottle (500ml)
+
+### Key Ingredients
+- Ginger
+
+### Brew Log
+- **2025-09-01**: Brewed and bottled
+- **2026-01-18**: Added to inventory (Fridge - shelf life testing)
+
+---
+
+## LOT 088: Fenton Close
+
+**Lot Number**: LOT 088
+**Street Name**: Fenton Close
+**Style**: Ginger Beer
+**Recipe**: None (no recipe file)
+**Brewed**: Unknown
+**Status**: Bottled
+
+### Stats
+- **ABV**: 0% (non-alcoholic)
+- **Quantity**: 6 bottles (500ml each)
+
+### Key Ingredients
+- Ginger
+
+### Brew Log
+- **Date unknown**: Brewed and bottled
+- **2026-01-18**: Added to inventory (Soft Drinks #1)
+
+---
+
+## LOT 087: Fenton Close (Lemon)
+
+**Lot Number**: LOT 087
+**Street Name**: Fenton Close
+**Style**: Ginger Beer (Lemon variant)
+**Recipe**: None (no recipe file)
+**Brewed**: Unknown
+**Status**: Bottled
+
+### Stats
+- **ABV**: 0% (non-alcoholic)
+- **Quantity**: 1 bottle (500ml)
+
+### Key Ingredients
+- Ginger
+- Lemon
+
+### Brew Log
+- **Date unknown**: Brewed and bottled
+- **2026-01-18**: Added to inventory (Soft Drinks #1)
 
 ---
