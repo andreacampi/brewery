@@ -14,10 +14,10 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Status**: Fermenting (Primary)
 
 ### Adjustments from Base Recipe
-- Scaled to 95% to fit fermenter volume
-- Water: 3.61L (95% of 3.8L)
-- Honey: 1258g (reduced from 1324g)
-- Blackberries: 1075g (reduced from 1132g)
+- Scaled to 90% to fit fermenter volume (had to discard ~5% twice)
+- Water: 3.42L (90% of 3.8L)
+- Honey: 1224g (90% of 1360g)
+- Blackberries: 1035g (90% of 1150g)
 - No pectic enzyme used
 
 ### Pitch
@@ -31,8 +31,8 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 - **FG**: 1.005 (estimated)
 
 ### Key Ingredients
-- Honey (1258g)
-- Blackberries (1075g, mashed)
+- Honey (1224g)
+- Blackberries (1035g, mashed)
 - Allspice seeds (1.5, cracked)
 - Cloves (1.5, crushed)
 - Lemon (half, chopped)
@@ -41,11 +41,10 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 ### Brew Log
 
 - **2026-01-18**: Hot water infusion with allspice, cloves, and lemon. Poured over mashed blackberries. Cooled to 25°C (waited for <35°C before mixing). Let cool overnight.
-- **2026-01-19**: OG 1.085 (measured after sifting fruit out), pitched 6g Mangrove Jack's M05
-- **Expected 2026-01-20**: First nutrient addition (2g, 24h)
-- **Expected 2026-01-21**: Second nutrient addition (2g, 48h)
-- **Expected 2026-01-22**: Third nutrient addition (2g, 72h)
-- **Expected 2026-01-26**: Fourth nutrient addition (2g, 1 week), rack through cheesecloth to remove fruit
+- **2026-01-19**: OG 1.085 (measured after sifting fruit out), pitched 6g Mangrove Jack's M05. First nutrient addition (2g, 24h)
+- **Expected 2026-01-20**: Second nutrient addition (2g, 48h)
+- **Expected 2026-01-21**: Third nutrient addition (2g, 72h)
+- **Expected 2026-01-25**: Fourth nutrient addition (2g, 1 week), rack through cheesecloth to remove fruit
 
 ---
 
