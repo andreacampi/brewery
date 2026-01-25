@@ -44,7 +44,7 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 - **2026-01-19**: OG 1.085 (measured after sifting fruit out), pitched 6g Mangrove Jack's M05. First nutrient addition (2g, 24h)
 - **2026-01-20**: Second nutrient addition (2g, 48h)
 - **2026-01-21**: Third nutrient addition (2g, 72h). Mixing shows high activity, smell is a bit pungent
-- **Expected 2026-01-25**: Fourth nutrient addition (2g, 1 week), rack through cheesecloth to remove fruit
+- **2026-01-25**: Fourth nutrient addition (2g, 1 week). Filtered through cheesecloth to remove fruit, but poured entire container through cloth instead of proper racking - result is less clear than it should be. Will rack again in a few days to clarify. SG 1.020 (~8.5% ABV so far)
 
 ---
 
