@@ -72,6 +72,13 @@ See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md]
   - Contains phase information, temperatures, timings, etc.
   - Example: `/v1/sessions/75556/` = LOT 099 (Double Hazy Jane)
 
+- `/v1/sessions/{id}/user_actions/` - List all instruction guides
+  - Returns 58 different manual instruction guides (e.g., "Add brew water", "Connect pressurizer", "Check Carbonation")
+  - Each user action has step-by-step instructions with images/videos
+  - Detail endpoint: `/v1/sessions/{id}/user_actions/{action_id}/`
+  - **Note:** User action IDs (e.g., 31, 65) are global MiniBrew instruction IDs, not session-specific
+  - **Unknown:** How the web app determines which actions to show at each stage (possibly based on device `process_state` or brewing profile)
+
 - `/v1/recipes/{id}/` - User's own recipes
   - Personal recipes (not shared community recipes)
   - Different from `/v1/shared_recipes/`
