@@ -45,6 +45,114 @@ Each recipe contains:
 
 See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md](shopping-list.md) for ingredients to buy.
 
+## MiniBrew API
+
+**Note:** This is reverse-engineered from the MiniBrew web portal. No official API documentation exists.
+
+**Base URL:** `https://api.minibrew.io/`
+
+**Required Headers:**
+- `Client: Breweryportal` (exact value required)
+- `Authorization: Bearer <session_token>` (for queries)
+
+**Credentials:** Stored in `auth.yaml` (not committed):
+- `email` - account email
+- `auth_token` - long-lived auth token (for TOKEN header)
+- `session_token` - short-lived request token (for Bearer header)
+- `user_id` - user ID for filtering results
+
+**Known Endpoints:**
+
+- `/v1/devices` - List brewing devices
+  - Returns device information including references to current/recent brew sessions
+  - Example: Device shows session ID 75556 (LOT 099)
+
+- `/v1/sessions/{id}/` - Brew session details
+  - Tracks actual brew performed on MiniBrew device
+  - Contains phase information, temperatures, timings, etc.
+  - Example: `/v1/sessions/75556/` = LOT 099 (Double Hazy Jane)
+
+- `/v1/recipes/{id}/` - User's own recipes
+  - Personal recipes (not shared community recipes)
+  - Different from `/v1/shared_recipes/`
+
+- `/v1/shared_recipes/` - Community recipes
+  - Public recipes shared by other users
+  - Cached locally in `.cache/recipes/` (see community-recipes skill)
+  - List endpoint: `/v1/shared_recipes/?limit=1000`
+  - Detail endpoint: `/v1/shared_recipes/{id}/`
+
+**Authentication:** See community-recipes skill for token refresh flow.
+
+### Response Examples
+
+**`/v1/devices/` response:**
+```json
+[
+  {
+    "uuid": "2130K0547-6RNKMJ14",
+    "serial_number": "2130K0547-6RNKMJ14",
+    "current_state": 1,
+    "process_type": 4,
+    "process_state": 94,
+    "user_action": 0,
+    "active_session": 75556,
+    "connection_status": 1,
+    "last_time_online": "2026-01-24T20:35:21Z",
+    "software_version": "3.2.3, idf-v4.2-50-g11005797d",
+    "custom_name": "Keg 2130K0547",
+    "device_type": 1,
+    "image": "https://minibrew.s3.amazonaws.com/static/devices/keg.png",
+    "last_process_state_change": "2026-01-27T18:53:46Z",
+    "process_estimate_remaining": "2026-01-27T19:25:38.287223Z",
+    "text": "is fermenting",
+    "updating": false
+  }
+]
+```
+
+**Key fields:**
+- `active_session` - ID of current brew session (null if idle)
+- `text` - Human-readable status (e.g., "is fermenting", "is ready to start a fresh brew")
+- `process_type` - Type of process (4 = fermenting)
+- `process_state` - Detailed state within process
+- `connection_status` - 0 = offline, 1 = online
+- `device_type` - 0 = base unit, 1 = keg
+
+**`/v1/sessions/{id}/` response:**
+```json
+{
+  "id": 75556,
+  "profile": 3832,
+  "beer": {
+    "id": 17196,
+    "name": "Double Hazy Jane",
+    "image": null,
+    "style_name": "New England IPA"
+  },
+  "device": {
+    "uuid": "2130K0547-6RNKMJ14",
+    "device_type": 1,
+    "connection_status": 1,
+    "process_type": 4,
+    "process_state": 94
+  },
+  "status": 1,
+  "beer_recipe_id": 1442881,
+  "beer_recipe_version": "1",
+  "brew_timestamp": 1767527648.349407,
+  "original_gravity": null,
+  "is_brewpack": false
+}
+```
+
+**Key fields:**
+- `beer_recipe_id` - User's personal recipe ID (use with `/v1/recipes/{id}/`)
+- `beer.name` - Name of the beer being brewed
+- `status` - Session status (1 = active)
+- `brew_timestamp` - Unix timestamp when brew started
+- `device.process_type` and `device.process_state` - Current phase
+
 ## Marketing Website (GitHub Pages)
 
 **Location:** `docs/` directory
