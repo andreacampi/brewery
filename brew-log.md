@@ -54,6 +54,7 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 **Street Name**: TBD
 **Style**: Double NEIPA
 **Recipe**: `1443929.json` (community)
+**MiniBrew Session**: 75556
 **Brewed**: 2026-01-04
 **Status**: Carbonating (in fermenter)
 
