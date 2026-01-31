@@ -56,7 +56,7 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 **Recipe**: `1443929.json` (community)
 **MiniBrew Session**: 75556
 **Brewed**: 2026-01-04
-**Status**: Carbonating (in fermenter)
+**Status**: On tap
 
 ### Adjustments from Base Recipe
 - Reduced Wheat Malt: 260g → 120g
@@ -86,7 +86,7 @@ A bold double NEIPA bursting with tropical hop character. Massively dry-hopped w
 - **2026-01-04**: OG 1.081, pitched SafAle US-05 (11g, expired - doubled to compensate)
 - **2026-01-16**: Racked to secondary, dry hopped in spider (Amarillo 16g, Citra 16g, Mosaic 16g, Simcoe 16g)
 - **2026-01-27**: Started carbonating in fermenter (no priming sugar, natural carbonation from residual fermentation)
-- **Expected 2026-01-30**: Bottle, target FG 1.016, ready to serve
+- **2026-01-30**: Ready to serve on tap
 
 ---
 
