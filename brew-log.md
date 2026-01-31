@@ -11,7 +11,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Style**: Blackberry Mead (Melomel)
 **Recipe**: `blackberry-mead-2026-01.json` (custom)
 **Brewed**: 2026-01-18
-**Status**: Fermenting (Primary)
+**Status**: Conditioning
 
 ### Adjustments from Base Recipe
 - Scaled to 90% to fit fermenter volume (had to discard ~5% twice)
@@ -45,6 +45,7 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 - **2026-01-20**: Second nutrient addition (2g, 48h)
 - **2026-01-21**: Third nutrient addition (2g, 72h). Mixing shows high activity, smell is a bit pungent
 - **2026-01-25**: Fourth nutrient addition (2g, 1 week). Filtered through cheesecloth to remove fruit, but poured entire container through cloth instead of proper racking - result is less clear than it should be. Will rack again in a few days to clarify. SG 1.020 (~8.5% ABV so far)
+- **2026-01-31**: FG 1.000 (~11.2% ABV), racked into 1L bottles for conditioning. Delicious, dry but not overly. Very cloudy - future batches should use bentonite early and filter during final racking
 
 ---
 
@@ -87,6 +88,7 @@ A bold double NEIPA bursting with tropical hop character. Massively dry-hopped w
 - **2026-01-16**: Racked to secondary, dry hopped in spider (Amarillo 16g, Citra 16g, Mosaic 16g, Simcoe 16g)
 - **2026-01-27**: Started carbonating in fermenter (no priming sugar, natural carbonation from residual fermentation)
 - **2026-01-30**: Ready to serve on tap
+- **2026-01-31**: Tasting - smells and tastes fantastic, authentic NEIPA character. Highly rated, will brew again
 
 ---
 
