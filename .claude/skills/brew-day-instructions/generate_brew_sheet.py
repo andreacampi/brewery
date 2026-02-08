@@ -422,8 +422,8 @@ class BrewSheetGenerator:
         if self.is_minibrew:
             abv = self.recipe.get('abv', 'N/A')
             ibu = self.recipe.get('ibu', 'N/A')
-            # MiniBrew keg recipes yield ~5L after losses
-            batch_size = "~5L"
+            # MiniBrew keg recipes yield 5.5L final product
+            batch_size = "5.5L"
 
             markdown = f"""# {self.recipe_name}
 

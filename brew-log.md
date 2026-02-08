@@ -25,7 +25,7 @@ A fast-fermenting NEIPA showcasing Kveik yeast's high-temperature capabilities. 
 - **IBU**: 22
 - **OG**: 1.055
 - **FG**: 1.010 (estimated)
-- **Batch**: ~5L
+- **Batch**: 5.5L
 
 ### Key Ingredients
 - Pilsner Malt (1098g), Flaked Oats (384g)
