@@ -276,11 +276,7 @@ class BrewSheetGenerator:
         for ferm in fermentables:
             lines.append(f"- {ferm['ingredient_name']}: {self._format_amount(ferm)}")
 
-        lines.append("")
-        lines.append("**Hops (Boil - in slot order):**")
-        lines.append("")
-
-        # Hops from boiling - SORT BY DURATION (highest first = added earliest)
+        # Hops from boiling - separate bittering vs aroma/flavor
         if 'boiling' in self.recipe and self.recipe['boiling']:
             # Collect all hops
             all_hops = []
@@ -290,11 +286,29 @@ class BrewSheetGenerator:
             # Sort by duration descending (60 min before flameout)
             all_hops.sort(key=lambda h: h['duration'], reverse=True)
 
-            # Number slots in chronological order
-            for slot, hop in enumerate(all_hops, 1):
-                time = hop['duration']
-                time_str = f"{time} min" if time > 0 else "flameout"
-                lines.append(f"- Slot {slot}: {hop['ingredient_name']}: {self._format_amount(hop)} @ {time_str}")
+            # Separate bittering additions (duration > 0) from aroma/flavor (flameout = 0)
+            bittering_hops = [h for h in all_hops if h['duration'] > 0]
+            aroma_hops = [h for h in all_hops if h['duration'] == 0]
+
+            # Bittering additions
+            if bittering_hops:
+                lines.append("")
+                lines.append("**Bittering Additions:**")
+                lines.append("")
+                for slot, hop in enumerate(bittering_hops, 1):
+                    time = hop['duration']
+                    lines.append(f"- Slot {slot}: {hop['ingredient_name']}: {self._format_amount(hop)} @ {time} min")
+
+            # Aroma/flavor hops
+            if aroma_hops:
+                lines.append("")
+                lines.append("**Aroma/Flavor Hops (Flameout):**")
+                lines.append("")
+                # Continue slot numbering from bittering hops
+                start_slot = len(bittering_hops) + 1
+                for i, hop in enumerate(aroma_hops):
+                    slot = start_slot + i
+                    lines.append(f"- Slot {slot}: {hop['ingredient_name']}: {self._format_amount(hop)} @ flameout")
 
 
         # Dry hops from while_fermenting - PRESERVE EXACT ORDER
