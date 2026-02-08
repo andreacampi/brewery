@@ -1,0 +1,428 @@
+{
+  "id": 648432,
+  "beer_id": 7326,
+  "shared": true,
+  "beer_name": "4 day kveik IPA",
+  "public_note": "",
+  "private_note": "",
+  "times_brewed": 0,
+  "serving_temperature": "5.00",
+  "water_amount": "7.43",
+  "kettle_water": "6.36",
+  "mashing": [
+    {
+      "mash_in_water": "1.07",
+      "sparge_in_water": null,
+      "steps": [
+        {
+          "duration": 60,
+          "temperature": "65.0",
+          "end_temperature": "65.0",
+          "order": 0
+        }
+      ],
+      "ingredient_additions": [
+        {
+          "ingredient_id": 1,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Pilsner Malt",
+          "ingredient_dry_yield": "78.50",
+          "ingredient_moisture": "4.50",
+          "ingredient_attenuation": null,
+          "amount": "1098.41",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "2.00",
+          "amount_units": "GR",
+          "fermentable_type": "GRA"
+        },
+        {
+          "ingredient_id": 1837,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Oats, Flaked",
+          "ingredient_dry_yield": "70.00",
+          "ingredient_moisture": "5.00",
+          "ingredient_attenuation": null,
+          "amount": "384.44",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "1.00",
+          "amount_units": "GR",
+          "fermentable_type": "GRA"
+        },
+        {
+          "ingredient_id": 1808,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Caramel Pils",
+          "ingredient_dry_yield": "70.00",
+          "ingredient_moisture": "5.00",
+          "ingredient_attenuation": null,
+          "amount": "151.03",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "1.00",
+          "amount_units": "GR",
+          "fermentable_type": "GRA"
+        },
+        {
+          "ingredient_id": 60,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Milk Sugar (Lactose)",
+          "ingredient_dry_yield": "76.10",
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "151.03",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "0.00",
+          "amount_units": "GR",
+          "fermentable_type": "SUG"
+        },
+        {
+          "ingredient_id": 1861,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Melanoidin Malt",
+          "ingredient_dry_yield": "80.00",
+          "ingredient_moisture": "3.50",
+          "ingredient_attenuation": null,
+          "amount": "82.38",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "25.00",
+          "amount_units": "GR",
+          "fermentable_type": "GRA"
+        }
+      ],
+      "order": 0,
+      "name": "Mash stage: 0"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 60,
+      "hops": [
+        {
+          "ingredient_id": 1516,
+          "ingredient_type": "HOP",
+          "ingredient_name": "Vic Secret",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "2.00",
+          "duration": 0,
+          "addition_step": "0-0",
+          "alpha_acid": "15.5",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": 19,
+          "ingredient_type": "HOP",
+          "ingredient_name": "MB - Cascade",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "9.08",
+          "duration": 60,
+          "addition_step": "0-0",
+          "alpha_acid": "5.5",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": 130,
+          "ingredient_type": "HOP",
+          "ingredient_name": "MB - Citra",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "9.00",
+          "duration": 0,
+          "addition_step": "0-0",
+          "alpha_acid": "13.0",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": 1516,
+          "ingredient_type": "HOP",
+          "ingredient_name": "Vic Secret",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "12.00",
+          "duration": 0,
+          "addition_step": "0-0",
+          "alpha_acid": "15.5",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": 130,
+          "ingredient_type": "HOP",
+          "ingredient_name": "MB - Citra",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "12.00",
+          "duration": 0,
+          "addition_step": "0-0",
+          "alpha_acid": "11.7",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": 1365,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "Voss Kveik(OmegaOYL-061)",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "82.00",
+          "amount": "5.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 2.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 0,
+      "name": "Ferm stage: 0",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 1,
+      "name": "Ferm stage: 1",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 2,
+      "name": "Ferm stage: 2",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 3,
+      "name": "Ferm stage: 3",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 4,
+      "name": "Ferm stage: 4",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 5,
+      "name": "Ferm stage: 5",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 1.0,
+          "temperature": "35.0",
+          "end_temperature": "35.0",
+          "order": 0
+        }
+      ],
+      "order": 6,
+      "name": "Ferm stage: 6",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [],
+    "hops": [
+      {
+        "ingredient_id": 130,
+        "ingredient_type": "HOP",
+        "ingredient_name": "MB - Citra",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "15.38",
+        "duration": 3.0,
+        "addition_step": "0-0",
+        "alpha_acid": "11.7",
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": 130,
+        "ingredient_type": "HOP",
+        "ingredient_name": "MB - Citra",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "15.10",
+        "duration": 3.0,
+        "addition_step": "0-0",
+        "alpha_acid": "18.5",
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": 1516,
+        "ingredient_type": "HOP",
+        "ingredient_name": "Vic Secret",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "9.95",
+        "duration": 3.0,
+        "addition_step": "0-0",
+        "alpha_acid": "20.0",
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": 1517,
+        "ingredient_type": "HOP",
+        "ingredient_name": "Galaxy",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "4.12",
+        "duration": 3.0,
+        "addition_step": "0-0",
+        "alpha_acid": "15.3",
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      },
+      {
+        "ingredient_id": 130,
+        "ingredient_type": "HOP",
+        "ingredient_name": "MB - Citra",
+        "ingredient_dry_yield": null,
+        "ingredient_moisture": null,
+        "ingredient_attenuation": null,
+        "amount": "10.30",
+        "duration": 1.0,
+        "addition_step": "0-0",
+        "alpha_acid": "18.0",
+        "srm": null,
+        "amount_units": "GR",
+        "fermentable_type": null
+      }
+    ]
+  },
+  "version_name": "2",
+  "hop_filter": 0,
+  "srm": "6.00",
+  "abv": "6.04",
+  "ibu": 22,
+  "kcal": "182.00",
+  "og": "1.055",
+  "fg": "1.010",
+  "modified_timestamp": 1653920066.653957,
+  "brewable": true,
+  "beer": {
+    "id": 7326,
+    "created": "2022-05-22T19:20:58Z",
+    "modified": "2022-05-30T14:14:26Z",
+    "name": "4 day kveik IPA",
+    "style": {
+      "id": 89,
+      "name": "New England IPA",
+      "blurb": "fruity, hoppy, hazy IPA",
+      "description": "An American IPA with intense fruit flavors and aromas, a soft body, and smooth mouthfeel, and often opaque with substantial haze. Less perceived bitterness than traditional IPAs but always massively hop forward. This emphasis on late hopping, especially dry hopping, with hops with tropical fruit qualities lends the specific ‘juicy’ character for which this style is known.",
+      "category": {
+        "id": 1,
+        "created": "2015-10-08T16:51:46Z",
+        "modified": "2016-09-14T06:57:39Z",
+        "name": "Ale",
+        "description": "Top fermenting beers"
+      }
+    },
+    "brewer": {
+      "id": 2884,
+      "name": "PeRo Incognito",
+      "image": "https://minibrew.s3.amazonaws.com/media/profiles/images/2022/04/original/PXL_20220430_0802529092_RHThblf.jpg"
+    }
+  },
+  "favourite": true,
+  "favourite_amount": 4
+}

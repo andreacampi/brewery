@@ -29,12 +29,20 @@ class BrewSheetGenerator:
             self.recipe = json.load(f)
 
         # Extract common fields
-        self.recipe_id = self.recipe['id']
+        # For custom recipes, use filename; for community recipes, use ID
+        if 'recipes/' in str(recipe_path):
+            self.recipe_id = recipe_path.stem  # filename without extension
+        else:
+            self.recipe_id = self.recipe['id']
         self.recipe_name = self.recipe['beer_name']
         self.water_amount = self.recipe['water_amount']
         self.og = float(self.recipe['og'])
         self.style = self.recipe['beer']['style']['name']
         self.private_note = self.recipe.get('private_note', '')
+
+        # Detect if this is a MiniBrew recipe by structure (has boiling section)
+        # MiniBrew beer recipes have a boiling section, meads don't
+        self.is_minibrew = 'boiling' in self.recipe and len(self.recipe.get('boiling', [])) > 0
 
         # Mashing info
         mashing = self.recipe['mashing'][0]
@@ -259,6 +267,114 @@ class BrewSheetGenerator:
 
         return '\n'.join(lines)
 
+    def generate_minibrew_ingredients(self) -> str:
+        """Generate simple ingredient checklist for MiniBrew recipes."""
+        lines = ["**Grains & Fermentables:**", ""]
+
+        # Fermentables from mashing
+        fermentables = self._get_ingredients('FERM')
+        for ferm in fermentables:
+            lines.append(f"- {ferm['ingredient_name']}: {self._format_amount(ferm)}")
+
+        lines.append("")
+        lines.append("**Hops:**")
+        lines.append("")
+
+        # Hops from boiling
+        if 'boiling' in self.recipe and self.recipe['boiling']:
+            for boil_stage in self.recipe['boiling']:
+                for hop in boil_stage.get('hops', []):
+                    time = hop['duration']
+                    time_str = f"{time} min" if time > 0 else "flameout"
+                    lines.append(f"- {hop['ingredient_name']}: {self._format_amount(hop)} @ {time_str}")
+
+        # Dry hops from while_fermenting
+        dry_hops = self.recipe['while_fermenting'].get('hops', [])
+        if dry_hops:
+            lines.append("")
+            lines.append("**Dry Hops:**")
+            lines.append("")
+            for hop in dry_hops:
+                lines.append(f"- {hop['ingredient_name']}: {self._format_amount(hop)}")
+
+        # Yeast
+        lines.append("")
+        lines.append("**Yeast:**")
+        lines.append("")
+        lines.append(f"- {self.yeast_name}: {self.yeast_amount}g")
+
+        return '\n'.join(lines)
+
+    def generate_minibrew_schedule(self) -> str:
+        """Generate fermentation schedule for MiniBrew recipes."""
+        # Build a day-by-day schedule first
+        schedule = {}
+        schedule[1] = ["**🔔 Brew day:** MiniBrew handles mash/boil/cooling. **PITCH YEAST** when prompted."]
+
+        # Get fermentation stages
+        current_day = 1
+        final_day = 1
+        for stage in self.recipe['fermenting']:
+            stage_type = stage.get('fermentation_stage_type', 'PRIM')
+            for step in stage['steps']:
+                duration = int(step['duration'])
+                if duration > 0:
+                    temp = step['temperature']
+                    stage_name = {
+                        'PRIM': 'Primary fermentation',
+                        'SECO': 'Secondary fermentation',
+                        'COND': 'Conditioning',
+                        'COLD': 'Cold crash'
+                    }.get(stage_type, 'Fermentation')
+
+                    # Add fermentation to each day in range
+                    for day in range(current_day, current_day + duration):
+                        if day not in schedule:
+                            schedule[day] = []
+                        schedule[day].append(f"{stage_name} @ {temp}°C")
+
+                    final_day = current_day + duration
+                    current_day = final_day
+
+        # Add hop additions during fermentation
+        ferm_hops = self.recipe['while_fermenting'].get('hops', [])
+        if ferm_hops:
+            hop_schedule = {}
+            for hop in ferm_hops:
+                day = int(hop.get('duration', 3))
+                if day not in hop_schedule:
+                    hop_schedule[day] = []
+                hop_schedule[day].append(f"{self._format_amount(hop)} {hop['ingredient_name']}")
+
+            for day, hops in hop_schedule.items():
+                if day not in schedule:
+                    schedule[day] = []
+                hops_str = ', '.join(hops)
+                # Day 1 hops are brew day additions, not dry hops
+                if day == 1:
+                    schedule[day].insert(0, f"**🔔 Add hops:** {hops_str}")
+                else:
+                    schedule[day].insert(0, f"**🔔 DRY HOP:** Add {hops_str}")
+
+        # Build the table from the schedule
+        lines = [
+            "| Day | Task |",
+            "|-----|------"
+        ]
+
+        for day in sorted(schedule.keys()):
+            tasks = schedule[day]
+            if len(tasks) == 1:
+                lines.append(f"| **Day {day}** | {tasks[0]} |")
+            else:
+                lines.append(f"| **Day {day}** | {' + '.join(tasks)} |")
+
+        # Bottling day
+        lines.append(f"| **Day {final_day}** | **🔔 BOTTLE** with priming sugar (or keg for natural carbonation) |")
+        lines.append("| Week 2+ | Condition in bottles, ready to drink! |")
+
+        return '\n'.join(lines)
+
     def generate_key_notes(self) -> str:
         """Generate key notes section."""
         notes = []
@@ -290,13 +406,44 @@ class BrewSheetGenerator:
 
     def generate_markdown(self) -> str:
         """Generate complete markdown brew sheet."""
+        # Build header line with optional lot number
+        lot_prefix = f"**Lot:** {self.lot_number} | " if self.lot_number else ""
+
+        # Use MiniBrew template for community recipes
+        if self.is_minibrew:
+            abv = self.recipe.get('abv', 'N/A')
+            ibu = self.recipe.get('ibu', 'N/A')
+            # MiniBrew keg recipes yield ~5L after losses
+            batch_size = "~5L"
+
+            markdown = f"""# {self.recipe_name}
+
+{lot_prefix}**Recipe:** {self.recipe_id} | **Batch:** {batch_size} | **Style:** {self.style} | **ABV:** {abv}% | **IBU:** {ibu}
+
+## Ingredients
+
+{self.generate_minibrew_ingredients()}
+
+## Fermentation Schedule
+
+{self.generate_minibrew_schedule()}
+
+## Notes
+
+- MiniBrew handles mash, boil, and cooling automatically
+- Pitch yeast when device prompts
+- Bottle on final day with priming sugar (or keg for natural carbonation)
+"""
+            if self.extra_note:
+                markdown += f"\n**Brew day note:** {self.extra_note}\n"
+
+            return markdown
+
+        # Original mead/manual template
         # Determine if yeast ferments dry
         dry_note = ""
         if self.atten_min > 85:
             dry_note = " Expect a dry finish."
-
-        # Build header line with optional lot number
-        lot_prefix = f"**Lot:** {self.lot_number} | " if self.lot_number else ""
 
         markdown = f"""# {self.recipe_name}
 

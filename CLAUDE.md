@@ -45,6 +45,14 @@ Each recipe contains:
 
 See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md](shopping-list.md) for ingredients to buy.
 
+## Brew Day Workflows
+
+**Generating Brew Sheets:**
+- Use the `brew-day-instructions` skill (not manual markdown generation)
+- Syntax: `/brew-day-instructions <recipe-path>`
+- Outputs PDF to `output/` directory for printing
+- Example: `/brew-day-instructions .cache/recipes/648432.json`
+
 ## MiniBrew API
 
 **Note:** This is reverse-engineered from the MiniBrew web portal. No official API documentation exists.

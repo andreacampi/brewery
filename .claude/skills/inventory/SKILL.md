@@ -217,6 +217,8 @@ naming_page: <naming_page_url>  # optional, for bottle naming conventions
 
 Once setup is complete, read `notion.yaml` to get database IDs for operations below.
 
+**Performance Tip:** When checking multiple ingredients for a recipe, batch all `mcp__notion__notion-fetch` calls in a single message for parallel execution. This is much faster than sequential searches.
+
 ## Error Handling: Notion API Timeouts
 
 **CRITICAL: If any Notion MCP request times out or fails:**
