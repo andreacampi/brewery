@@ -277,25 +277,34 @@ class BrewSheetGenerator:
             lines.append(f"- {ferm['ingredient_name']}: {self._format_amount(ferm)}")
 
         lines.append("")
-        lines.append("**Hops:**")
+        lines.append("**Hops (Boil - in slot order):**")
         lines.append("")
 
-        # Hops from boiling
+        # Hops from boiling - SORT BY DURATION (highest first = added earliest)
         if 'boiling' in self.recipe and self.recipe['boiling']:
+            # Collect all hops
+            all_hops = []
             for boil_stage in self.recipe['boiling']:
-                for hop in boil_stage.get('hops', []):
-                    time = hop['duration']
-                    time_str = f"{time} min" if time > 0 else "flameout"
-                    lines.append(f"- {hop['ingredient_name']}: {self._format_amount(hop)} @ {time_str}")
+                all_hops.extend(boil_stage.get('hops', []))
 
-        # Dry hops from while_fermenting
+            # Sort by duration descending (60 min before flameout)
+            all_hops.sort(key=lambda h: h['duration'], reverse=True)
+
+            # Number slots in chronological order
+            for slot, hop in enumerate(all_hops, 1):
+                time = hop['duration']
+                time_str = f"{time} min" if time > 0 else "flameout"
+                lines.append(f"- Slot {slot}: {hop['ingredient_name']}: {self._format_amount(hop)} @ {time_str}")
+
+
+        # Dry hops from while_fermenting - PRESERVE EXACT ORDER
         dry_hops = self.recipe['while_fermenting'].get('hops', [])
         if dry_hops:
             lines.append("")
-            lines.append("**Dry Hops:**")
+            lines.append("**Dry Hops (in order):**")
             lines.append("")
-            for hop in dry_hops:
-                lines.append(f"- {hop['ingredient_name']}: {self._format_amount(hop)}")
+            for i, hop in enumerate(dry_hops, 1):
+                lines.append(f"- Slot {i}: {hop['ingredient_name']}: {self._format_amount(hop)}")
 
         # Yeast
         lines.append("")

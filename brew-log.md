@@ -4,6 +4,43 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 101: 4 Day Kveik IPA
+
+**Lot Number**: LOT 101
+**Street Name**: TBD
+**Style**: New England IPA
+**Recipe**: `4-day-kveik-ipa-2026-02.json` (custom)
+**Brewed**: 2026-02-08
+**Status**: Brewing
+
+### Adjustments from Base Recipe
+- Substituted Melanoidin Malt for American Honey Malt (82g)
+
+### Pitch
+
+A fast-fermenting NEIPA showcasing Kveik yeast's high-temperature capabilities. Pilsner malt base with flaked oats and lactose for a smooth, full body. Late hop additions and massive dry hopping (Day 1 and Day 3) with Citra, Vic Secret, and Galaxy deliver tropical fruit and citrus notes. Melanoidin malt adds malty depth in place of honey malt. Ready in just 4 days from grain to bottle.
+
+### Stats
+- **ABV**: 6.04%
+- **IBU**: 22
+- **OG**: 1.055
+- **FG**: 1.010 (estimated)
+- **Batch**: ~5L
+
+### Key Ingredients
+- Pilsner Malt (1098g), Flaked Oats (384g)
+- Caramel Pils (151g), Lactose (151g), Melanoidin Malt (82g)
+- Boil Hops: Cascade (9g @ 60 min), Vic Secret (14g flameout), Citra (21g flameout)
+- Day 1 Hops: Citra (10g)
+- Dry Hops (Day 3): Citra (40g), Vic Secret (10g), Galaxy (4g)
+- Yeast: Voss Kveik (5g)
+
+### Brew Log
+
+- **2026-02-08**: Brew day. MiniBrew mash/boil/cool. Pitched Voss Kveik (5g, no rehydration). Primary fermentation @ 35°C.
+
+---
+
 ## LOT 100: Blackberry Mead
 
 **Lot Number**: LOT 100
