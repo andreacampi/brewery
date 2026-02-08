@@ -311,6 +311,31 @@ mcp__notion__notion-update-page
   }
 ```
 
+## Managing Multiple Batches (FIFO)
+
+**CRITICAL:** When the same ingredient exists in multiple database entries (e.g., different harvest years, batches), **always use the batch closest to expiration first**.
+
+### Workflow:
+
+1. **Search for ingredient** - May return multiple entries (e.g., "Citra" returns "Citra (2023)" and "Citra (2024)")
+
+2. **Sort by expiration date** - Use the entry with the earliest `Expiration Date`
+
+3. **Deduct from oldest batch first** - Update the quantity for the entry expiring soonest
+
+4. **Move to next batch** - Only deduct from newer batches once older ones are depleted (Inventory Amount reaches 0)
+
+### Example: Multiple Citra entries
+
+Search returns:
+- Citra (2023): 70g, BBE 2028-08-31
+- Citra (2024): 100g, BBE 2029-08-31
+
+Recipe needs 21g Citra:
+1. Use from Citra (2023) first (earliest expiration)
+2. 70g - 21g = 49g remaining
+3. Leave Citra (2024) at 100g untouched
+
 ## Cellar (Bottle Inventory)
 
 Tracks bottled homebrew inventory (see `notion.yaml` for database URL and ID):
