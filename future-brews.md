@@ -4,7 +4,7 @@
 
 *Only showing ingredients expiring within 4 months or already expired. Check Notion inventory for full expiration dates.*
 
-- [ ] Extra Pale Malt - 442g (expired 2026-02-01) → Use in any pale ale/NEIPA
+- [ ] Extra Pale Malt - 442g (expired 2026-02-01) → Galaxy of shambolic
 - [ ] WHC Bond - 11g (expired 2025-06-30) → SMaSHing BoB
 
 ## SMaSHing BoB (Citra SMaSH)
@@ -74,6 +74,46 @@
 - Uses expiring Pilsner Malt (1350g) from inventory
 - WHC Blitz Lager substitutes for SafLager W-34/70
 - Need to buy: Wheat Malt, Munich Malt (see shopping list)
+
+---
+
+## Galaxy of shambolic
+
+**Source**: `1329425.json` | **Brewer**: Community
+
+### Stats
+| ABV | IBU | SRM | OG | FG | kcal |
+|-----|-----|-----|----|----|------|
+| 5.57% | 18 | 4 | 1.052 | 1.010 | 168 |
+
+### Grain Bill (60 min @ 60°C, 10 min @ 75°C)
+| Ingredient | Amount |
+|------------|--------|
+| Extra Pale Maris Otter | 1500g |
+| Cara-pils/dextrine | 150g |
+
+### Boil (60 min)
+| Hop | Amount | Time |
+|-----|--------|------|
+| Galaxy | 6g | 10 min |
+| Galaxy | 12g | 0 min (flameout) |
+
+### Dry Hops
+| Hop | Amount |
+|-----|--------|
+| Galaxy | 20g |
+
+### Fermentation
+- **Yeast**: Lallemand New England (11g)
+- **Primary**: 3 days @ 25°C
+- **Secondary**: 2 days @ 10°C
+- **Conditioning**: 4 days @ 5°C
+
+### Notes
+- Uses expiring Extra Pale Malt (442g + buy 1058g more)
+- Simple 2-grain recipe - perfect for using up Extra Pale Malt
+- Low IBU (18) NEIPA with Galaxy hop character
+- Need to buy: Extra Pale Malt (1500g total), Galaxy hops (34g), Lallemand New England yeast
 
 ---
 
