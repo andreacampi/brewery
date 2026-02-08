@@ -5,7 +5,13 @@ Ingredients to buy for planned brews:
 | Ingredient | Amount | For Recipe |
 |------------|--------|------------|
 | Extra Pale Maris Otter | 1500g | Galaxy of shambolic |
-| Galaxy hops | 40g | LOT 101 (4.12g) + Galaxy of shambolic (38g) |
+| Flaked Oats | 1136g | 4-Day Kveik IPA (x4) |
+| Caramel Pils | 324g | 4-Day Kveik IPA (x4) |
+| Lactose | 204g | 4-Day Kveik IPA (x4) |
+| Melanoidin Malt | 148g | 4-Day Kveik IPA (x4) |
+| Galaxy hops | 56g | LOT 101 (4.12g) + Galaxy of shambolic (38g) + Kveik IPA x4 (16g) |
+| Vic Secret hops | 76g | 4-Day Kveik IPA (x4) |
+| Citra hops | 74g | 4-Day Kveik IPA (x4) |
 | Lallemand New England yeast | 11g | Galaxy of shambolic |
 | Flaked Wheat | 120g | London Porter (x2) |
 | Chocolate Malt | 240g | London Porter (x2) |
