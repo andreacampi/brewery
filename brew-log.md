@@ -15,6 +15,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ### Adjustments from Base Recipe
 - Substituted Melanoidin Malt for American Honey Malt (82g)
+- One flameout hop failed to drop (either Vic Secret 10g or Citra 9-12g) - added to Day 1 dry hops instead
+- Skipped 10.30g Citra dry hop (duration 1.0) - MiniBrew app didn't prompt for it on Day 3
 
 ### Pitch
 
@@ -37,7 +39,8 @@ A fast-fermenting NEIPA showcasing Kveik yeast's high-temperature capabilities. 
 
 ### Brew Log
 
-- **2026-02-08**: Brew day. MiniBrew mash/boil/cool. Pitched Voss Kveik (5g, no rehydration). Primary fermentation @ 35°C.
+- **2026-02-08**: Brew day. MiniBrew mash/boil/cool. Pitched Voss Kveik (5g, no rehydration). Added Day 1 dry hops (15.38g + 15.10g Citra, 9.95g Vic Secret, 4.12g Galaxy, plus missed flameout hop). Primary fermentation @ 35°C.
+- **2026-02-10**: Primary fermentation complete. Conditioning @ 35°C begins. Skipped final dry hop (10.30g Citra) - app didn't prompt.
 
 ---
 
