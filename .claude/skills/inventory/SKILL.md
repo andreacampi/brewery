@@ -76,7 +76,7 @@ mcp__notion__notion-create-database
 - properties: {
     "Name": {"type": "title"},
     "Inventory Amount": {"type": "number", "number": {"format": "number"}},
-    "Cost (£/g)": {"type": "number", "number": {"format": "pound"}},
+    "Cost (£/100g)": {"type": "number", "number": {"format": "pound"}},
     "Sub-Category": {"type": "select", "select": {"options": [
       {"name": "Bittering"}, {"name": "Aroma"}, {"name": "Dual Purpose"}
     ]}},
@@ -254,7 +254,7 @@ Once setup is complete, read `notion.yaml` to get database IDs for operations be
 
 **Fermentables:** `Cost (£/kg)`, `Sub-Category` (Base Malt, Crystal Malt, Specialty Malt, Adjunct), `Dry Yield %`, `Moisture %`, `SRM`
 
-**Hops:** `Cost (£/g)`, `Sub-Category` (Bittering, Aroma, Dual Purpose), `Alpha Acid %`, `Harvest Year`
+**Hops:** `Cost (£/100g)`, `Sub-Category` (Bittering, Aroma, Dual Purpose), `Alpha Acid %`, `Harvest Year`
 
 **Yeast:** `Cost (£/g)`, `Sub-Category` (Ale, Lager, Wine, Mead), `Attenuation %`, `Flocculation`, `Pitch Rate (g/L)`, `Temperature Range`
 
