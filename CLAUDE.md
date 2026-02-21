@@ -78,6 +78,27 @@ See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md]
 - Beer: "Still in keg" = awaiting tap/bottle decision
 - Mead: "Racked to 1L bottles" = intermediate conditioning stage, not final bottling
 
+## Ingredient Shelf Life
+
+Expiry dates on brewing ingredients are best-by dates for quality, not safety cutoffs. All figures assume good storage conditions.
+
+### Dried Yeast
+- Shelf life: 1–3 years from manufacture (manufacturer guarantee)
+- **Refrigerated and unopened: can remain viable well beyond expiry** — homebrewers regularly report success 1–3 years past the date
+- Main enemies: oxygen and heat (not time per se)
+- Andrea stores yeast in the fridge at all times, which significantly extends viability
+- **Always proof yeast that is more than a few months past expiry** before committing to a batch
+- Sources: [Homebrew Talk](https://homebrewtalk.com/threads/dry-yeast-after-expiration-date-still-good.690980/) · [Northern Brewer Forum](https://forum.northernbrewer.com/t/viability-of-expired-dry-yeast/24321)
+
+### Whole Grain Malt (uncrushed)
+- Shelf life: 6–12 months (manufacturer best-by)
+- **Stored cool and dry: stable for up to a year or more** — a few weeks past expiry is negligible
+- Degrades gradually: loses aromatic compounds and enzymatic activity over time; moisture is the first sign of trouble
+- Sources: [Brewing With Briess](https://www.brewingwithbriess.com/blog/a-day-in-the-shelf-life/) · [Beer Creation](https://beercreation.com/storing-grains/) · [Brew Your Own](https://byo.com/articles/shelf-life-storing-your-ingredients/)
+
+### Practical Implication
+When prioritising use of expired ingredients, consider **time past expiry and storage conditions**, not just the expiry date alone. A bag of malt 3 weeks past its date is almost certainly fine. Dried yeast 8 months past expiry is more uncertain — proof it first.
+
 ## MiniBrew API
 
 **Note:** This is reverse-engineered from the MiniBrew web portal. No official API documentation exists.
