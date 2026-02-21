@@ -53,6 +53,31 @@ See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md]
 - Outputs PDF to `output/` directory for printing
 - Example: `/brew-day-instructions .cache/recipes/648432.json`
 
+## Post-Fermentation Handling
+
+**CRITICAL:** Beer and mead require different handling due to oxygen sensitivity.
+
+### Beer (Oxygen-Sensitive)
+**Workflow:** Ferment in keg → Either tap and drink OR bottle directly to crown bottles with CO2 gun
+
+- **Never** rack beer to intermediate containers - oxygen exposure degrades hop character and freshness
+- Two options after fermentation:
+  1. Tap from keg and drink fresh
+  2. Bottle directly to crown bottles using CO2 gun to prevent oxygen exposure
+- No intermediate conditioning bottles
+
+### Mead (Oxygen-Tolerant)
+**Workflow:** Ferment → Rack to 1L screw-top bottles → Taste/evaluate → Final crown bottles for aging
+
+- **Can** rack to intermediate containers - aeration is acceptable
+- Use 1L screw-top bottles for conditioning and tasting
+- Easy to sample and evaluate before final bottling
+- Final bottling to crown bottles only after tasting confirms readiness
+
+**Brew Log Interpretation:**
+- Beer: "Still in keg" = awaiting tap/bottle decision
+- Mead: "Racked to 1L bottles" = intermediate conditioning stage, not final bottling
+
 ## MiniBrew API
 
 **Note:** This is reverse-engineered from the MiniBrew web portal. No official API documentation exists.
