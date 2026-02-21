@@ -41,7 +41,7 @@ A fast-fermenting NEIPA showcasing Kveik yeast's high-temperature capabilities. 
 
 - **2026-02-08**: Brew day. MiniBrew mash/boil/cool. Pitched Voss Kveik (5g, no rehydration). Added Day 1 dry hops (15.38g + 15.10g Citra, 9.95g Vic Secret, 4.12g Galaxy, plus missed flameout hop). Primary fermentation @ 35°C.
 - **2026-02-10**: Primary fermentation complete. Conditioning @ 35°C begins. Skipped final dry hop (10.30g Citra) - app didn't prompt.
-- **2026-02-21**: Equipment failure on bottling — excessive hop residue clogged the keg lines, insufficient pressure to dispense. Transferred to temporary bottles (no CO2, not oxygen-proof). Refrigerated. Drink quickly.
+- **2026-02-21**: Equipment failure on bottling — excessive hop residue clogged the keg lines, insufficient pressure to dispense. Transferred to temporary bottles (no CO2, not oxygen-proof). Refrigerated. Expect flat beer. Drink quickly.
 
 ---
 
