@@ -4,6 +4,41 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 102: SMaSHing BoB (Citra SMaSH)
+
+**Lot Number**: LOT 102
+**Street Name**: TBD
+**Style**: American IPA
+**Recipe**: `1139286.json` (MiniBrew community, Robert Hilbrands)
+**Brewed**: 2026-02-21
+**Status**: Fermenting
+
+### Adjustments from Base Recipe
+- Grain substitution: Crisp Best Ale (1815g) instead of generic Pale Malt
+- Yeast substitution: WHC Bond (11g, expired 2025-06-30) instead of SafAle US-05
+
+### Pitch
+
+A single-malt, single-hop IPA showcasing Citra from grain to glass. Clean Crisp Best Ale base malt with four Citra additions across the boil — bittering at 30 min, then aroma/flavor at 15 min, 5 min, and flameout. Simple and expressive.
+
+### Stats
+- **ABV**: ~6.01% (estimate — WHC Bond attenuation may differ from US-05)
+- **IBU**: 60
+- **OG**: 1.056
+- **FG**: ~1.011 (estimated)
+- **Batch**: 5.5L
+
+### Key Ingredients
+- Crisp Best Ale (1815g)
+- Citra: 7g @ 30 min, 7g @ 15 min, 7g @ 5 min, 7g @ flameout
+- Yeast: WHC Bond (11g, substituting SafAle US-05)
+
+### Brew Log
+
+- **2026-02-21**: Brew day. MiniBrew mash/boil/cool. Pitched WHC Bond (11g, expired Jun 2025). Primary fermentation @ 19°C.
+
+---
+
 ## LOT 101: 4 Day Kveik IPA
 
 **Lot Number**: LOT 101
