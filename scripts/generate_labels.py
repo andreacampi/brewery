@@ -7,6 +7,7 @@ Multiple labels per A4 page for efficient printing.
 """
 
 import json
+import re
 import argparse
 from pathlib import Path
 from io import BytesIO
@@ -161,7 +162,6 @@ class BreweryLabelGenerator:
         Returns:
             Cleaned ingredient name
         """
-        import re
         # Remove all parenthetical annotations (processing details, quantities, etc.)
         clean_name = re.sub(r'\s*\(.*?\)', '', name).strip()
 
