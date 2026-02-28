@@ -161,10 +161,9 @@ class BreweryLabelGenerator:
         Returns:
             Cleaned ingredient name
         """
-        # Remove obvious processing details
-        clean_name = name
-        clean_name = clean_name.replace('(steeped)', '').strip()
-        clean_name = clean_name.replace('steeped', '').strip()
+        import re
+        # Remove all parenthetical annotations (processing details, quantities, etc.)
+        clean_name = re.sub(r'\s*\(.*?\)', '', name).strip()
 
         return clean_name
 
