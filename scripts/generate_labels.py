@@ -144,6 +144,10 @@ class BreweryLabelGenerator:
         if 'yeast' in name_lower:
             return False
 
+        # Skip processing aids (enzymes, etc.)
+        if 'enzyme' in name_lower:
+            return False
+
         return True
 
     def _clean_ingredient_name(self, name):
@@ -385,7 +389,15 @@ Examples:
             'abv': '11.81',
             'url': 'https://andreacampi.github.io/brewery/navarino-road/',
             'lot': 'LOT 098',
-        }
+        },
+        'colvestone': {
+            'name': 'Colvestone',
+            'style': 'Blackberry Mead',
+            'recipe': 'recipes/blackberry-mead-2026-01.json',
+            'abv': '10.9',
+            'url': 'https://andreacampi.github.io/brewery/colvestone/',
+            'lot': 'LOT 100',
+        },
     }
 
     config = batch_config.get(args.batch)
