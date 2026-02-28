@@ -83,11 +83,11 @@ A fast-fermenting NEIPA showcasing Kveik yeast's high-temperature capabilities. 
 ## LOT 100: Blackberry Mead
 
 **Lot Number**: LOT 100
-**Street Name**: TBD
+**Street Name**: Colvestone
 **Style**: Blackberry Mead (Melomel)
 **Recipe**: `blackberry-mead-2026-01.json` (custom)
 **Brewed**: 2026-01-18
-**Status**: Conditioning
+**Status**: Bottled
 
 ### Adjustments from Base Recipe
 - Scaled to 90% to fit fermenter volume (had to discard ~5% twice)
@@ -122,6 +122,8 @@ A rich fruit mead featuring mashed blackberries infused with warming allspice an
 - **2026-01-21**: Third nutrient addition (2g, 72h). Mixing shows high activity, smell is a bit pungent
 - **2026-01-25**: Fourth nutrient addition (2g, 1 week). Filtered through cheesecloth to remove fruit, but poured entire container through cloth instead of proper racking - result is less clear than it should be. Will rack again in a few days to clarify. SG 1.020 (~8.5% ABV so far)
 - **2026-01-31**: FG 1.000 (~11.2% ABV), racked into 1L bottles for conditioning. Delicious, dry but not overly. Very cloudy - future batches should use bentonite early and filter during final racking
+- **2026-02-22**: Tasting confirms very dry (expected). Heavy sediment — racking carefully. Will taste again, take gravity reading, and likely backsweeten.
+- **2026-02-28**: Slight backsweetening. FG 1.002 (~10.9% ABV). Bottled 6 × 500ml crown bottles. Mead Box #3.
 
 ---
 
