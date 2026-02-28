@@ -48,10 +48,10 @@ This skill automates the creation of compact, printer-friendly brew sheets that 
 2. **Generates Markdown Brew Sheet**: Creates a formatted markdown document with:
    - **Header**: Recipe name, batch size, style, stats
    - **Ingredient Table**: Organized by category with amounts and timing
-   - **Brew Day Steps**: Sequential instructions with temperatures and durations
    - **Fermentation Schedule**: Daily/weekly tasks with additions
    - **Gravity Calculations**: OG/FG ranges based on yeast attenuation
    - **Key Notes**: Important reminders, substitutions, troubleshooting
+   - **No mash/boil section** — MiniBrew handles this automatically
 
 3. **Converts to HTML**: Uses pandoc to create standalone HTML with styling
 
@@ -73,12 +73,14 @@ This skill automates the creation of compact, printer-friendly brew sheets that 
 
 ## Compact Format Sections
 
-1. **Header**: Recipe ID, batch size, style, OG, FG, ABV range
+1. **Header**: Recipe ID, batch size, style, ABV, IBU
 2. **Ingredients Table**: Category, item, amount, timing
-3. **Brew Day Steps**: Numbered sequential instructions
-4. **Fermentation Schedule**: Day-by-day tasks table
-5. **Expected Gravity Range**: Table with min/max attenuation scenarios
-6. **Key Notes**: Bullet points for critical information
+3. **Fermentation Schedule**: Day-by-day tasks table
+
+**Omit:**
+- Mash/boil steps — MiniBrew handles these automatically
+- Notes section — by print time the brewer has already committed; general reminders add no value
+- Expected Gravity table (beers only) — taking gravity readings is inconvenient with our equipment; include for meads only
 
 ## Detailed Format Sections
 
@@ -123,7 +125,7 @@ Auto-detects based on recipe category or can be specified.
 
 **Formatting:**
 - Uses markdown tables for compact presentation
-- Applies pandoc template for consistent HTML styling
+- Applies pandoc template for consistent HTML styling: `pandoc input.md -o output.html --standalone --css=brew-sheet.css` (no `--metadata title` — the markdown H1 serves as the title)
 - Chrome print settings optimized for single-page-per-sheet
 
 **Error Handling:**
