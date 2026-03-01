@@ -4,44 +4,6 @@
 
 *Only showing ingredients expiring within 4 months or already expired. Check Notion inventory for full expiration dates.*
 
-- [ ] Extra Pale Malt - 442g (expired 2026-02-01) → Galaxy of shambolic
-- [ ] WHC Bond - 11g (expired 2025-06-30) → SMaSHing BoB
-
-## SMaSHing BoB (Citra SMaSH)
-
-**Source**: `1139286.json` | **Brewer**: Robert Hilbrands (BoB)
-
-### Stats
-| ABV | IBU | SRM | OG | FG | kcal |
-|-----|-----|-----|----|----|------|
-| 6.01% | 60 | 8 | 1.056 | 1.011 | 181 |
-
-### Grain Bill (60 min @ 63°C, 5 min @ 78°C)
-| Ingredient | Amount |
-|------------|--------|
-| Crisp Best Ale | 1815g |
-
-### Boil (30 min)
-| Hop | Amount | Time |
-|-----|--------|------|
-| Citra | 7g | 30 min |
-| Citra | 7g | 15 min |
-| Citra | 7g | 5 min |
-| Citra | 7g | 0 min (flameout) |
-
-### Fermentation
-- **Yeast**: WHC Bond (11g)
-- **Primary**: 4 days @ 19°C, then 1 day @ 22°C
-- **Secondary**: 1 day @ 18°C, 2 days @ 14°C
-- **Cold crash**: 2 days @ 5°C
-
-### Notes
-- Uses expiring Crisp Best Ale (1815g) and expired WHC Bond yeast
-- Universal recipe - can swap Citra for Cascade, Mosaic, Simcoe, or Amarillo
-- Target 50-70 IBU, adjust hop amounts based on alpha acid %
-
----
-
 ## Münchner Helles
 
 **Source**: `1322070.json` | **Brewer**: Mark
@@ -110,10 +72,10 @@
 - **Conditioning**: 4 days @ 5°C
 
 ### Notes
-- Uses expiring Extra Pale Malt (442g + buy 1058g more)
+- Uses expiring Extra Pale Malt (442g + bought 1058g more — 1.5kg total in stock)
 - Simple 2-grain recipe - perfect for using up Extra Pale Malt
 - Low IBU (18) NEIPA with Galaxy hop character
-- Need to buy: Extra Pale Malt (1500g total), Galaxy hops (34g), Lallemand New England yeast
+- All ingredients in stock — ready to brew
 
 ---
 
