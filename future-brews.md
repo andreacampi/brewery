@@ -79,7 +79,7 @@
 
 ---
 
-## London Porter - John Finch
+## London Porter - John Finch (LOT 103)
 
 **Source**: `691614.json` | **Brewer**: ScotBoy
 

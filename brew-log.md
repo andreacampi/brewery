@@ -4,6 +4,40 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 103: London Porter
+
+**Lot Number**: LOT 103
+**Street Name**: TBD
+**Style**: English Porter
+**Recipe**: `691614.json` (community — ScotBoy / John Finch)
+**Brewed**: TBD
+**Status**: Planned
+
+### Adjustments from Base Recipe
+- Grain substitution: Crisp Best Ale instead of Maris Otter Pale Ale malt
+- Grain substitution: Heritage Crystal Malt instead of Caramel/Crystal 80L
+
+### Stats
+- **ABV**: 5.03%
+- **IBU**: 48
+- **OG**: 1.047
+- **FG**: 1.009
+- **Batch**: ~5.5L
+
+### Key Ingredients
+- Crisp Best Ale (1200g)
+- Chocolate Malt (120g)
+- Heritage Crystal Malt (120g)
+- Wheat Flaked (60g)
+- Roasted Barley (60g)
+- Centennial (5g @ 90 min)
+- Willamette (8g @ 30 min, 12g @ 5 min)
+- Yeast: Mangrove Jacks M42 (4g)
+
+### Brew Log
+
+---
+
 ## LOT 102: SMaSHing BoB (Citra SMaSH)
 
 **Lot Number**: LOT 102
