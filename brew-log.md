@@ -11,7 +11,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Style**: American IPA
 **Recipe**: `1139286.json` (MiniBrew community, Robert Hilbrands)
 **Brewed**: 2026-02-21
-**Status**: Fermenting
+**Status**: Ready (in keg — deciding whether to bottle or drink fresh)
 
 ### Adjustments from Base Recipe
 - Grain substitution: Crisp Best Ale (1815g) instead of generic Pale Malt
@@ -36,6 +36,7 @@ A single-malt, single-hop IPA showcasing Citra from grain to glass. Clean Crisp 
 ### Brew Log
 
 - **2026-02-21**: Brew day. MiniBrew mash/boil/cool. Pitched WHC Bond (11g, expired Jun 2025). Primary fermentation @ 19°C.
+- **2026-03-07**: Tasting — balanced hop character, balanced bitterness, light-bodied and easy drinking. Nice light colour. One of the better recipes. Deciding whether to bottle or drink fresh from keg.
 
 ---
 
