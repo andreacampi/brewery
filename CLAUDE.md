@@ -78,6 +78,52 @@ See [future-brews.md](future-brews.md) for upcoming brews and [shopping-list.md]
 - Beer: "Still in keg" = awaiting tap/bottle decision
 - Mead: "Racked to 1L bottles" = intermediate conditioning stage, not final bottling
 
+## Bottle Priming (Dextrose)
+
+Used when bottling beer that needs carbonation (not mead, which carbonates differently).
+
+### Formula
+
+```
+Dextrose (g) = batch_litres × (target_CO₂ - residual_CO₂) × 3.84
+```
+
+**Residual CO₂** (volumes) from beer temperature at bottling time (°F):
+```
+residual = 3.0378 - (0.050062 × temp_F) + (0.00026555 × temp_F²)
+```
+
+| Beer temp (°C) | Residual CO₂ |
+|---------------|--------------|
+| 14°C          | ~1.04 vol    |
+| 17°C          | ~0.93 vol    |
+| 19°C          | ~0.86 vol    |
+| 21°C          | ~0.80 vol    |
+
+**Target CO₂ by style** (approximate — verify against a priming calculator):
+
+| Style              | Target vol CO₂ |
+|--------------------|----------------|
+| British/session ale | 1.5–2.2        |
+| American ale / IPA | 2.2–2.6        |
+| Wheat beer         | 2.8–3.5        |
+
+### Practical Process
+
+1. Calculate dextrose needed
+2. Dissolve in a small amount of water (60ml is convenient), bring briefly to boil, cool to room temp
+3. Add to bottling vessel, then fill bottles — sugar distributes evenly
+4. Seal and leave at room temp ~2 weeks, then move to fridge
+
+### Solution Volume Reference
+
+Dissolving sugar in 60ml water gives ~66–68ml solution total.
+Divide evenly by number of bottles to get ml per bottle (use a syringe).
+
+**Example (3L batch, 6 × 500ml, 14°C, 2.4 vol target):**
+- Dextrose: 3.0 × (2.4 − 1.04) × 3.84 ≈ **16g**
+- Solution: 16g in 60ml water → ~11ml per bottle
+
 ## Ingredient Shelf Life
 
 Expiry dates on brewing ingredients are best-by dates for quality, not safety cutoffs. All figures assume good storage conditions.

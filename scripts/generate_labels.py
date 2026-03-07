@@ -2,8 +2,9 @@
 """
 Bottle Label Generator for Dalston Rooftop Brewery
 
-Generates back bottle labels (4cm x 6cm) with ingredients, ABV, and QR code.
-Multiple labels per A4 page for efficient printing.
+Generates front and back bottle labels:
+- Front: street name stamped on template PDF, 2 copies per A4 sheet
+- Back: 4cm x 6cm labels with ingredients, ABV, and QR code, 16 per A4 sheet
 """
 
 import json
@@ -12,12 +13,74 @@ import argparse
 from pathlib import Path
 from io import BytesIO
 
+import fitz  # pymupdf
+
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor
 from reportlab.lib.utils import ImageReader
 import qrcode
+
+
+ASSETS_DIR = Path(__file__).parent.parent / 'assets'
+LABEL_TEMPLATE = ASSETS_DIR / 'label-template.pdf'
+GEORGIA_FONT = Path('/System/Library/Fonts/Supplemental/Georgia.ttf')
+
+# Front label text position (top-down PDF coordinates, points)
+FRONT_TEXT_Y = 259
+FRONT_TEXT_FONTSIZE = 14
+FRONT_TEXT_COLOR = (0.102, 0.157, 0.22)  # Navy #1a2838
+
+
+class FrontLabelGenerator:
+    """Stamp street name onto the front label template, 2 copies per A4 sheet."""
+
+    # A4 dimensions in points
+    A4_WIDTH = 595.276
+    A4_HEIGHT = 841.89
+
+    def __init__(self, batch_name):
+        self.batch_name = batch_name
+
+    def generate_pdf(self, output_path):
+        template = fitz.open(str(LABEL_TEMPLATE))
+        label_page = template[0]
+        lw = label_page.rect.width
+        lh = label_page.rect.height
+
+        # Stamp the street name on the template
+        font = fitz.Font(fontfile=str(GEORGIA_FONT))
+        tw = font.text_length(self.batch_name, fontsize=FRONT_TEXT_FONTSIZE)
+        x = (lw - tw) / 2
+        label_page.insert_font(fontname='Georgia', fontfile=str(GEORGIA_FONT))
+        label_page.insert_text(
+            (x, FRONT_TEXT_Y),
+            self.batch_name,
+            fontname='Georgia',
+            fontsize=FRONT_TEXT_FONTSIZE,
+            color=FRONT_TEXT_COLOR,
+        )
+
+        # Place 2 copies stacked vertically on A4
+        out = fitz.open()
+        page = out.new_page(width=self.A4_WIDTH, height=self.A4_HEIGHT)
+
+        scale = 1.10
+        scaled_w = lw * scale
+        scaled_h = lh * scale
+
+        gap = 10  # points between labels
+        # Centre vertically, distributing remaining space as top/bottom margin
+        margin = (self.A4_HEIGHT - 2 * scaled_h - gap) / 2
+        x_left = (self.A4_WIDTH - scaled_w) / 2
+        for i in range(2):
+            y_top = margin + i * (scaled_h + gap)
+            rect = fitz.Rect(x_left, y_top, x_left + scaled_w, y_top + scaled_h)
+            page.show_pdf_page(rect, template, 0)
+
+        out.save(str(output_path))
+        print(f"Generated front labels: {output_path}")
 
 
 class BreweryLabelGenerator:
@@ -397,6 +460,14 @@ Examples:
             'url': 'https://andreacampi.github.io/brewery/colvestone/',
             'lot': 'LOT 100',
         },
+        'broadway': {
+            'name': 'Broadway',
+            'style': 'American IPA',
+            'recipe': '.cache/recipes/1139286.json',
+            'abv': '6.01',
+            'url': 'https://andreacampi.github.io/brewery/broadway/',
+            'lot': 'LOT 102',
+        },
     }
 
     config = batch_config.get(args.batch)
@@ -420,7 +491,11 @@ Examples:
     # Determine lot number (CLI arg overrides config)
     lot_number = args.lot or config.get('lot')
 
-    # Generate labels
+    # Generate front labels
+    front_output = output_dir / f"{args.batch}-front-labels.pdf"
+    FrontLabelGenerator(config['name']).generate_pdf(front_output)
+
+    # Generate back labels
     generator = BreweryLabelGenerator(
         batch_name=config['name'],
         style=config['style'],
@@ -429,7 +504,6 @@ Examples:
         url=config['url'],
         lot_number=lot_number
     )
-
     generator.generate_pdf(output_path, num_labels=args.labels)
     return 0
 

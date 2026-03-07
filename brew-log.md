@@ -41,7 +41,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 ## LOT 102: SMaSHing BoB (Citra SMaSH)
 
 **Lot Number**: LOT 102
-**Street Name**: TBD
+**Street Name**: Broadway
 **Style**: American IPA
 **Recipe**: `1139286.json` (MiniBrew community, Robert Hilbrands)
 **Brewed**: 2026-02-21
@@ -70,7 +70,7 @@ A single-malt, single-hop IPA showcasing Citra from grain to glass. Clean Crisp 
 ### Brew Log
 
 - **2026-02-21**: Brew day. MiniBrew mash/boil/cool. Pitched WHC Bond (11g, expired Jun 2025). Primary fermentation @ 19°C.
-- **2026-03-07**: Tasting — balanced hop character, balanced bitterness, light-bodied and easy drinking. Nice light colour. One of the better recipes. Deciding whether to bottle or drink fresh from keg.
+- **2026-03-07**: Tasting — balanced hop character, balanced bitterness, light-bodied and easy drinking. Nice light colour. One of the better recipes. Decided to bottle 3L (6 × 500ml); remainder to drink fresh from keg. Priming: 16g dextrose dissolved in 60ml boiled water (~11ml solution per bottle), targeting ~2.4 vol CO₂ at 14°C.
 
 ---
 
