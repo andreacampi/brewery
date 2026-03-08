@@ -36,7 +36,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ### Brew Log
 
-- **2026-03-08**: Brew day. MiniBrew mash/boil/cool. Pitched M42 (4g). Primary fermentation @ 20°C. Process failure: 12g Willamette (5 min addition) did not drop — missed from boil entirely. Added as dry hop in muslin bag. Remove Wednesday 2026-03-11.
+- **2026-03-08**: Brew day. MiniBrew mash/boil/cool. Pitched M42 (~4.5g; recipe calls for 4g). Primary fermentation @ 20°C. Process failure: 12g Willamette (5 min addition) did not drop — missed from boil entirely. Added as dry hop in muslin bag. Remove Wednesday 2026-03-11.
 
 ---
 
