@@ -14,7 +14,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Status**: Planned
 
 ### Adjustments from Base Recipe
-- Grain substitution: Crisp Best Ale instead of Maris Otter Pale Ale malt
+- Grain substitution: split base malt — 633g Maris Otter (using up stock) + 567g Crisp Best Ale (instead of 1200g Maris Otter)
 - Grain substitution: Heritage Crystal Malt instead of Caramel/Crystal 80L
 
 ### Stats
@@ -25,7 +25,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 - **Batch**: ~5.5L
 
 ### Key Ingredients
-- Crisp Best Ale (1200g)
+- Maris Otter Pale Ale Malt (633g) + Crisp Best Ale (567g)
 - Chocolate Malt (120g)
 - Heritage Crystal Malt (120g)
 - Wheat Flaked (60g)
