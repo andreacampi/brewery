@@ -10,8 +10,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Street Name**: TBD
 **Style**: English Porter
 **Recipe**: `691614.json` (community — ScotBoy / John Finch)
-**Brewed**: TBD
-**Status**: Planned
+**Brewed**: 2026-03-08
+**Status**: Fermenting
 
 ### Adjustments from Base Recipe
 - Grain substitution: split base malt — 633g Maris Otter (using up stock) + 567g Crisp Best Ale (instead of 1200g Maris Otter)
@@ -35,6 +35,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 - Yeast: Mangrove Jacks M42 (4g)
 
 ### Brew Log
+
+- **2026-03-08**: Brew day. MiniBrew mash/boil/cool. Pitched M42 (4g). Primary fermentation @ 20°C. Process failure: 12g Willamette (5 min addition) did not drop — missed from boil entirely.
 
 ---
 
