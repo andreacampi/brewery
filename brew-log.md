@@ -10,7 +10,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Street Name**: TBD
 **Style**: Munich Helles (Lager)
 **Recipe**: `recipes/munchner-helles-lot-104.json` (cloned from community 1322070, Mark)
-**Brewed**: TBD
+**Brewed**: 2026-03-15 (planned)
+**Bottling**: 2026-04-10 (planned — day 27)
 **Status**: Planned
 
 ### Adjustments from Base Recipe

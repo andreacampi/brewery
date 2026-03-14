@@ -379,18 +379,34 @@ class BrewSheetGenerator:
                 else:
                     schedule[day].insert(0, f"**🔔 DRY HOP:** Add {hops_str}")
 
-        # Build the table from the schedule
+        # Group consecutive days with identical tasks
+        sorted_days = sorted(schedule.keys())
+        grouped_rows = []
+        i = 0
+        while i < len(sorted_days):
+            day = sorted_days[i]
+            tasks = schedule[day]
+            j = i + 1
+            while (j < len(sorted_days)
+                   and sorted_days[j] == sorted_days[j - 1] + 1
+                   and schedule[sorted_days[j]] == tasks):
+                j += 1
+            end_day = sorted_days[j - 1]
+            label = f"**Day {day}**" if end_day == day else f"**Days {day}–{end_day}**"
+            grouped_rows.append((label, tasks))
+            i = j
+
+        # Build the table from grouped rows
         lines = [
             "| Day | Task |",
             "|-----|------"
         ]
 
-        for day in sorted(schedule.keys()):
-            tasks = schedule[day]
+        for label, tasks in grouped_rows:
             if len(tasks) == 1:
-                lines.append(f"| **Day {day}** | {tasks[0]} |")
+                lines.append(f"| {label} | {tasks[0]} |")
             else:
-                lines.append(f"| **Day {day}** | {' + '.join(tasks)} |")
+                lines.append(f"| {label} | {' + '.join(tasks)} |")
 
         # Bottling day
         lines.append(f"| **Day {final_day}** | **🔔 BOTTLE** with priming sugar (or keg for natural carbonation) |")
@@ -451,11 +467,6 @@ class BrewSheetGenerator:
 
 {self.generate_minibrew_schedule()}
 
-## Notes
-
-- MiniBrew handles mash, boil, and cooling automatically
-- Pitch yeast when device prompts
-- Bottle on final day with priming sugar (or keg for natural carbonation)
 """
             if self.extra_note:
                 markdown += f"\n**Brew day note:** {self.extra_note}\n"
