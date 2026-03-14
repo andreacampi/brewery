@@ -4,6 +4,36 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 104: Münchner Helles
+
+**Lot Number**: LOT 104
+**Street Name**: TBD
+**Style**: Munich Helles (Lager)
+**Recipe**: `recipes/munchner-helles-lot-104.json` (cloned from community 1322070, Mark)
+**Brewed**: TBD
+**Status**: Planned
+
+### Adjustments from Base Recipe
+- Munich Malt omitted (50g, ~3.5% of grain bill — negligible impact)
+- Yeast substitution: WHC Blitz Lager instead of SafLager W-34/70
+
+### Stats
+- **ABV**: 4.67%
+- **IBU**: 21
+- **OG**: 1.047
+- **FG**: 1.012
+- **Batch**: ~5.5L
+
+### Key Ingredients
+- Pilsner Malt (1350g)
+- Wheat Malt (50g)
+- Hallertauer Mittelfrüh: 8g @ 60 min, 6g @ 10 min
+- Yeast: WHC Blitz Lager (11g)
+
+### Brew Log
+
+---
+
 ## LOT 103: London Porter
 
 **Lot Number**: LOT 103

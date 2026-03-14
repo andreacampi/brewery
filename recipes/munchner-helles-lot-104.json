@@ -1,0 +1,234 @@
+{
+  "id": "munchner-helles-lot-104",
+  "beer_id": 11151,
+  "shared": false,
+  "beer_name": "Münchner Helles",
+  "public_note": "Basic recipee for a Münchner Helles.",
+  "private_note": "Cloned from community recipe 1322070 (Mark). Variation: Munich Malt omitted (only 50g, ~3.5% of grain bill — negligible impact). Yeast substitution: WHC Blitz Lager instead of SafLager W-34/70.",
+  "times_brewed": 0,
+  "serving_temperature": "5.00",
+  "water_amount": "7.21",
+  "kettle_water": "6.30",
+  "mashing": [
+    {
+      "mash_in_water": "0.91",
+      "sparge_in_water": null,
+      "steps": [
+        {
+          "duration": 5,
+          "temperature": "64.0",
+          "end_temperature": "64.0",
+          "order": 0
+        },
+        {
+          "duration": 65,
+          "temperature": "70.0",
+          "end_temperature": "70.0",
+          "order": 1
+        },
+        {
+          "duration": 15,
+          "temperature": "78.0",
+          "end_temperature": "78.0",
+          "order": 2
+        }
+      ],
+      "ingredient_additions": [
+        {
+          "ingredient_id": 1,
+          "ingredient_type": "FERM",
+          "ingredient_name": "Pilsner Malt",
+          "ingredient_dry_yield": "78.50",
+          "ingredient_moisture": "4.50",
+          "ingredient_attenuation": null,
+          "amount": "1350.00",
+          "duration": 0,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "3.00",
+          "amount_units": "GR",
+          "fermentable_type": "GRA"
+        },
+        {
+          "ingredient_id": 2,
+          "ingredient_type": "FERM",
+          "ingredient_name": "MB - Wheat Malt",
+          "ingredient_dry_yield": "80.50",
+          "ingredient_moisture": "5.50",
+          "ingredient_attenuation": null,
+          "amount": "50.00",
+          "duration": 0,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": "3.00",
+          "amount_units": "GR",
+          "fermentable_type": "GRA"
+        }
+      ],
+      "order": 0,
+      "name": "Mash stage: 0"
+    }
+  ],
+  "boiling": [
+    {
+      "duration": 75,
+      "hops": [
+        {
+          "ingredient_id": 4,
+          "ingredient_type": "HOP",
+          "ingredient_name": "Hallertauer Mittelfrueh",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "8.00",
+          "duration": 60,
+          "addition_step": "0-0",
+          "alpha_acid": "3.7",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": 4,
+          "ingredient_type": "HOP",
+          "ingredient_name": "Hallertauer Mittelfrueh",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "6.00",
+          "duration": 10,
+          "addition_step": "0-0",
+          "alpha_acid": "3.7",
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "other_ingredients": [],
+      "order": 0
+    }
+  ],
+  "fermenting": [
+    {
+      "fermentation_stage_type": "PRIM",
+      "yeast": [
+        {
+          "ingredient_id": 5,
+          "ingredient_type": "YEAST",
+          "ingredient_name": "WHC Blitz Lager",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": "75.00",
+          "amount": "11.00",
+          "duration": 0.0,
+          "addition_step": null,
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
+          "fermentable_type": null
+        }
+      ],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "25.0",
+          "end_temperature": "25.0",
+          "order": 0
+        },
+        {
+          "duration": 2.0,
+          "temperature": "12.0",
+          "end_temperature": "12.0",
+          "order": 1
+        },
+        {
+          "duration": 3.0,
+          "temperature": "14.0",
+          "end_temperature": "14.0",
+          "order": 2
+        }
+      ],
+      "order": 0,
+      "name": "Ferm stage: 0",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 0.0,
+          "temperature": "14.0",
+          "end_temperature": "14.0",
+          "order": 0
+        }
+      ],
+      "order": 1,
+      "name": "Ferm stage: 1",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "SECND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 6.0,
+          "temperature": "12.0",
+          "end_temperature": "12.0",
+          "order": 0
+        }
+      ],
+      "order": 2,
+      "name": "Ferm stage: 2",
+      "pressure_relief": 0
+    },
+    {
+      "fermentation_stage_type": "COND",
+      "yeast": [],
+      "steps": [
+        {
+          "duration": 15.0,
+          "temperature": "5.0",
+          "end_temperature": "5.0",
+          "order": 0
+        }
+      ],
+      "order": 3,
+      "name": "Ferm stage: 3",
+      "pressure_relief": 0
+    }
+  ],
+  "while_fermenting": {
+    "other_ingredients": [],
+    "hops": []
+  },
+  "version_name": "1",
+  "hop_filter": 0,
+  "srm": "6.00",
+  "abv": "4.67",
+  "ibu": 21,
+  "kcal": "141.00",
+  "og": "1.047",
+  "fg": "1.012",
+  "brewable": true,
+  "beer": {
+    "id": 11151,
+    "name": "Münchner Helles",
+    "style": {
+      "id": 8,
+      "name": "Munich Helles",
+      "blurb": "A  malty, gold-colored lager",
+      "description": "A clean, malty, gold-colored German lager with a smooth grainy-sweet malty flavor and a soft, dry finish. Subtle spicy, floral, or herbal hops and restrained bitterness help keep the balance malty but not sweet, which helps make this beer a refreshing, everyday drink.",
+      "category": {
+        "id": 2,
+        "name": "Lager",
+        "description": "Bottom fermenting beers"
+      }
+    },
+    "brewer": {
+      "id": 623,
+      "name": "Mark"
+    }
+  },
+  "favourite": false
+}

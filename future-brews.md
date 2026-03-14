@@ -4,7 +4,7 @@
 
 *Only showing ingredients expiring within 4 months or already expired. Check Notion inventory for full expiration dates.*
 
-## Münchner Helles
+## Münchner Helles (LOT 104)
 
 **Source**: `1322070.json` | **Brewer**: Mark
 
@@ -35,7 +35,7 @@
 ### Notes
 - Uses expiring Pilsner Malt (1350g) from inventory
 - WHC Blitz Lager substitutes for SafLager W-34/70
-- Need to buy: Munich Malt (see shopping list) — Wheat Malt already in stock
+- Munich Malt omitted (negligible at 50g). All ingredients in stock — ready to brew.
 
 ---
 
