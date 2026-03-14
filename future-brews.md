@@ -35,7 +35,7 @@
 ### Notes
 - Uses expiring Pilsner Malt (1350g) from inventory
 - WHC Blitz Lager substitutes for SafLager W-34/70
-- Need to buy: Wheat Malt, Munich Malt (see shopping list)
+- Need to buy: Munich Malt (see shopping list) — Wheat Malt already in stock
 
 ---
 
