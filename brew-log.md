@@ -48,8 +48,9 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Style**: American IPA
 **Recipe**: `1139286.json` (MiniBrew community, Robert Hilbrands)
 **Brewed**: 2026-02-21
-**Status**: Bottled 2026-03-07
+**Status**: Gone
 **Bottled**: 2026-03-07 (3L → 6 × 500ml crown bottles; remainder consumed fresh from keg)
+**Finished**: 2026-03-14
 
 ### Adjustments from Base Recipe
 - Grain substitution: Crisp Best Ale (1815g) instead of generic Pale Malt
