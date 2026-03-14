@@ -408,9 +408,14 @@ class BrewSheetGenerator:
             else:
                 lines.append(f"| {label} | {' + '.join(tasks)} |")
 
-        # Bottling day
+        # Bottling day and post-bottling
         lines.append(f"| **Day {final_day}** | **🔔 BOTTLE** with priming sugar (or keg for natural carbonation) |")
-        lines.append("| Week 2+ | Condition in bottles, ready to drink! |")
+        is_lager = self.recipe['beer']['style']['category']['name'] == 'Lager'
+        if is_lager:
+            lines.append("| +2 weeks | Condition at room temperature (~20°C) |")
+            lines.append("| +1 week | Refrigerate (~4°C) to clarify — then ready to drink |")
+        else:
+            lines.append("| +2 weeks | Condition at room temperature — then ready to drink |")
 
         return '\n'.join(lines)
 
