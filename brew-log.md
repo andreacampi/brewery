@@ -10,9 +10,9 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Street Name**: TBD
 **Style**: Munich Helles (Lager)
 **Recipe**: `recipes/munchner-helles-lot-104.json` (cloned from community 1322070, Mark)
-**Brewed**: 2026-03-15 (planned)
+**Brewed**: 2026-03-15
 **Bottling**: 2026-04-10 (planned — day 27)
-**Status**: Planned
+**Status**: Fermenting
 
 ### Adjustments from Base Recipe
 - Munich Malt omitted (50g, ~3.5% of grain bill — negligible impact)
@@ -26,12 +26,14 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 - **Batch**: ~5.5L
 
 ### Key Ingredients
-- Pilsner Malt (1350g)
+- Bohemian Pilsner Malt / Weyermann (1350g)
 - Wheat Malt (50g)
 - Hallertauer Mittelfrüh: 8g @ 60 min, 6g @ 10 min
 - Yeast: WHC Blitz Lager (11g)
 
 ### Brew Log
+
+- **2026-03-15**: Brew day. MiniBrew mash/boil/cool. Pitched WHC Blitz Lager (11g). Primary fermentation underway.
 
 ---
 
