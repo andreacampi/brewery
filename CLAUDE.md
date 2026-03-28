@@ -172,6 +172,11 @@ When prioritising use of expired ingredients, consider **time past expiry and st
   - Contains phase information, temperatures, timings, etc.
   - Example: `/v1/sessions/75556/` = LOT 099 (Double Hazy Jane)
 
+- `/v1/breweryoverview/` - Rich device status with live temperatures
+  - Groups devices into: `fermenting`, `serving`, `brew_clean_idle`, `brew_acid_clean_idle`
+  - Key fields per device: `current_temp`, `target_temp` (°C), `stage`, `gravity`, `session_id`
+  - Use this instead of `/v1/devices/` when you need temperature data
+
 - `/v1/sessions/{id}/user_actions/` - List all instruction guides
   - Returns 58 different manual instruction guides (e.g., "Add brew water", "Connect pressurizer", "Check Carbonation")
   - Each user action has step-by-step instructions with images/videos

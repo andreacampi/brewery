@@ -118,6 +118,36 @@ When you know the lot number but need the session ID:
 
 **Note:** There's no direct API link between our lot numbers and MiniBrew session IDs. The mapping must be maintained manually in brew-log.md or by matching beer name + brew date.
 
+## Brewery Overview (with temperatures)
+
+Use `/v1/breweryoverview/` for a richer status including **live temperatures**, stage, and gravity — grouped by state (fermenting, serving, idle).
+
+```bash
+session_token=$(grep session_token auth.yaml | cut -d' ' -f2)
+curl -s -H'Client: Breweryportal' -H "Authorization: Bearer $session_token" \
+  'https://api.minibrew.io/v1/breweryoverview/' | jq '
+    (.fermenting[], .serving[]) | {
+      beer: .beer_name,
+      stage: .stage,
+      current_temp: .current_temp,
+      target_temp: .target_temp,
+      gravity: .gravity,
+      online: .online
+    }'
+```
+
+Response groups devices into:
+- `fermenting` — active fermentation
+- `serving` — conditioning / on tap
+- `brew_clean_idle` — base unit, idle or disconnected
+- `brew_acid_clean_idle` — base unit, needs acid clean
+
+Key fields per device:
+- `current_temp` / `target_temp` — live sensor readings (°C)
+- `stage` — human-readable phase (e.g. "Clarification", "Serving")
+- `gravity` — current gravity reading
+- `session_id` — active session ID
+
 ## Common Tasks
 
 ### Check if any device is currently brewing
