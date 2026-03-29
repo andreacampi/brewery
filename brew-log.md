@@ -40,7 +40,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 ## LOT 103: London Porter
 
 **Lot Number**: LOT 103
-**Street Name**: TBD
+**Street Name**: Middleton Road
 **Style**: English Porter
 **Recipe**: `691614.json` (community — ScotBoy / John Finch)
 **Brewed**: 2026-03-08

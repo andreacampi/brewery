@@ -40,8 +40,9 @@ class FrontLabelGenerator:
     A4_WIDTH = 595.276
     A4_HEIGHT = 841.89
 
-    def __init__(self, batch_name):
+    def __init__(self, batch_name, beer_style=None):
         self.batch_name = batch_name
+        self.beer_style = beer_style
 
     def generate_pdf(self, output_path):
         template = fitz.open(str(LABEL_TEMPLATE))
@@ -49,11 +50,12 @@ class FrontLabelGenerator:
         lw = label_page.rect.width
         lh = label_page.rect.height
 
-        # Stamp the street name on the template
+        label_page.insert_font(fontname='Georgia', fontfile=str(GEORGIA_FONT))
         font = fitz.Font(fontfile=str(GEORGIA_FONT))
+
+        # Stamp the street name on the template
         tw = font.text_length(self.batch_name, fontsize=FRONT_TEXT_FONTSIZE)
         x = (lw - tw) / 2
-        label_page.insert_font(fontname='Georgia', fontfile=str(GEORGIA_FONT))
         label_page.insert_text(
             (x, FRONT_TEXT_Y),
             self.batch_name,
@@ -61,6 +63,19 @@ class FrontLabelGenerator:
             fontsize=FRONT_TEXT_FONTSIZE,
             color=FRONT_TEXT_COLOR,
         )
+
+        # Stamp the beer style on the second row (if provided)
+        if self.beer_style:
+            style_fontsize = FRONT_TEXT_FONTSIZE - 2
+            sw = font.text_length(self.beer_style, fontsize=style_fontsize)
+            sx = (lw - sw) / 2
+            label_page.insert_text(
+                (sx, FRONT_TEXT_Y + 18),
+                self.beer_style,
+                fontname='Georgia',
+                fontsize=style_fontsize,
+                color=FRONT_TEXT_COLOR,
+            )
 
         # Place 2 copies stacked vertically on A4
         out = fitz.open()
@@ -468,6 +483,14 @@ Examples:
             'url': 'https://andreacampi.github.io/brewery/broadway/',
             'lot': 'LOT 102',
         },
+        'middleton-road': {
+            'name': 'Middleton Road',
+            'style': 'English Porter',
+            'recipe': '.cache/recipes/691614.json',
+            'abv': '5.03',
+            'url': 'https://andreacampi.github.io/brewery/middleton-road/',
+            'lot': 'LOT 103',
+        },
     }
 
     config = batch_config.get(args.batch)
@@ -493,7 +516,7 @@ Examples:
 
     # Generate front labels
     front_output = output_dir / f"{args.batch}-front-labels.pdf"
-    FrontLabelGenerator(config['name']).generate_pdf(front_output)
+    FrontLabelGenerator(config['name'], beer_style=config.get('style')).generate_pdf(front_output)
 
     # Generate back labels
     generator = BreweryLabelGenerator(
