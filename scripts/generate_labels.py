@@ -176,6 +176,22 @@ class BreweryLabelGenerator:
                 if self._should_include_ingredient(name):
                     ingredients.append(self._clean_ingredient_name(name))
 
+        # Extract hops from boiling section (deduplicated, grouped as "X and Y hops")
+        seen_hops = set()
+        hop_names = []
+        for boil in recipe.get('boiling', []):
+            for hop in boil.get('hops', []):
+                name = self._clean_ingredient_name(hop['ingredient_name'])
+                if name not in seen_hops:
+                    seen_hops.add(name)
+                    hop_names.append(name)
+        if hop_names:
+            if len(hop_names) == 1:
+                hops_str = f"{hop_names[0]} hops"
+            else:
+                hops_str = ', '.join(hop_names[:-1]) + f' and {hop_names[-1]} hops'
+            ingredients.append(hops_str)
+
         # Extract from while_fermenting (dry hops, adjuncts)
         while_ferm = recipe.get('while_fermenting', {})
         for ing in while_ferm.get('other_ingredients', []):
@@ -229,11 +245,12 @@ class BreweryLabelGenerator:
 
         return True
 
-    # Lookup table for ingredient names that need explicit shortening
+    # Lookup table for ingredient names that need explicit shortening or correction
     INGREDIENT_SHORT_NAMES = {
         'Maris Otter Pale Ale malt': 'Maris Otter',
         'Maris Otter Pale Ale Malt': 'Maris Otter',
-        'Mangrove Jacks New World Strong Ale M42': 'M42',
+        'Mangrove Jacks New World Strong Ale M42': 'M42 yeast',
+        'Wilamette': 'Willamette',  # typo in MiniBrew recipe data
     }
 
     def _clean_ingredient_name(self, name):
@@ -325,22 +342,22 @@ class BreweryLabelGenerator:
         c.rect(x, y, self.LABEL_WIDTH, self.LABEL_HEIGHT)
 
         # Ingredients section
-        y_pos = y + self.LABEL_HEIGHT - 8 * mm
+        y_pos = y + self.LABEL_HEIGHT - 5 * mm
 
         # Combine "Ingredients: " with the ingredient list on same line
         c.setFillColor(self.NAVY_BLUE)
         c.setFont("Helvetica-Bold", 8)
         label_text = "Ingredients: "
         label_width = c.stringWidth(label_text, "Helvetica-Bold", 8)
-        c.drawString(x + 5 * mm, y_pos, label_text)
+        c.drawString(x + 3 * mm, y_pos, label_text)
 
         # Draw ingredients continuing on same line
         c.setFillColor(self.DARK_GRAY)
         c.setFont("Helvetica", 7)
 
         # Simple text wrapping, starting after "Ingredients: " label
-        max_width_first = self.LABEL_WIDTH - 10 * mm - label_width
-        max_width = self.LABEL_WIDTH - 10 * mm
+        max_width_first = self.LABEL_WIDTH - 6 * mm - label_width
+        max_width = self.LABEL_WIDTH - 6 * mm
         words = self.ingredients.split()
         lines = []
         current_line = []
@@ -366,7 +383,7 @@ class BreweryLabelGenerator:
             lines = lines[:max_ingredient_lines]
             lines[-1] = lines[-1].rstrip(',') + '…'
 
-        x_offset = x + 5 * mm + label_width
+        x_offset = x + 3 * mm + label_width
         for i, line in enumerate(lines):
             if i == 0:
                 # First line continues after "Ingredients: "
@@ -374,30 +391,30 @@ class BreweryLabelGenerator:
             else:
                 # Subsequent lines start at left margin - reduced spacing
                 y_pos -= 2.5 * mm
-                c.drawString(x + 5 * mm, y_pos, line)
+                c.drawString(x + 3 * mm, y_pos, line)
 
         # ABV and Lot anchored at fixed positions above the QR code
         rounded_abv = round(float(self.abv) * 2) / 2
-        abv_y = y + 42 * mm
+        abv_y = y + 39 * mm
         c.setFillColor(self.NAVY_BLUE)
         c.setFont("Helvetica-Bold", 8)
         abv_label = "ABV: "
         abv_label_width = c.stringWidth(abv_label, "Helvetica-Bold", 8)
-        c.drawString(x + 5 * mm, abv_y, abv_label)
+        c.drawString(x + 3 * mm, abv_y, abv_label)
         c.setFillColor(self.DARK_GRAY)
         c.setFont("Helvetica", 7)
-        c.drawString(x + 5 * mm + abv_label_width, abv_y, f"{rounded_abv:.1f}%")
+        c.drawString(x + 3 * mm + abv_label_width, abv_y, f"{rounded_abv:.1f}%")
 
         if self.lot_number:
-            lot_y = y + 45 * mm
+            lot_y = y + 44 * mm
             c.setFillColor(self.NAVY_BLUE)
             c.setFont("Helvetica-Bold", 8)
             lot_label = "Lot: "
             lot_label_width = c.stringWidth(lot_label, "Helvetica-Bold", 8)
-            c.drawString(x + 5 * mm, lot_y, lot_label)
+            c.drawString(x + 3 * mm, lot_y, lot_label)
             c.setFillColor(self.DARK_GRAY)
             c.setFont("Helvetica", 7)
-            c.drawString(x + 5 * mm + lot_label_width, lot_y, self.lot_number)
+            c.drawString(x + 3 * mm + lot_label_width, lot_y, self.lot_number)
 
         # QR Code - use color from palette
         if self.QR_COLOR_MODE == 'cycle':
