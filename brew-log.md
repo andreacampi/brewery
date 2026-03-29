@@ -44,7 +44,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Style**: English Porter
 **Recipe**: `691614.json` (community — ScotBoy / John Finch)
 **Brewed**: 2026-03-08
-**Status**: Fermenting
+**Bottled**: 2026-03-29
+**Status**: Bottled
 
 ### Adjustments from Base Recipe
 - Grain substitution: split base malt — 633g Maris Otter (using up stock) + 567g Crisp Best Ale (instead of 1200g Maris Otter)
@@ -71,6 +72,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 - **2026-03-08**: Brew day. MiniBrew mash/boil/cool. Pitched M42 (~4.5g; recipe calls for 4g). Primary fermentation @ 20°C. Process failure: 12g Willamette (5 min addition) did not drop — missed from boil entirely. Added as dry hop in muslin bag.
 - **2026-03-11**: Removed Willamette dry hop bag (3 days).
+- **2026-03-29**: Bottled. 6 × 500ml crown bottles (3L, primed with 12.1g dextrose @ 2.0 vol CO₂, beer at 16.9°C). Remainder moved to fridge bottle. Keg emptied — ready to clean.
 
 ---
 
