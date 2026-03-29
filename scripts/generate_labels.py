@@ -229,6 +229,13 @@ class BreweryLabelGenerator:
 
         return True
 
+    # Lookup table for ingredient names that need explicit shortening
+    INGREDIENT_SHORT_NAMES = {
+        'Maris Otter Pale Ale malt': 'Maris Otter',
+        'Maris Otter Pale Ale Malt': 'Maris Otter',
+        'Mangrove Jacks New World Strong Ale M42': 'M42',
+    }
+
     def _clean_ingredient_name(self, name):
         """
         Clean up ingredient name by removing obvious processing details.
@@ -240,8 +247,21 @@ class BreweryLabelGenerator:
         Returns:
             Cleaned ingredient name
         """
+        # Check lookup table first
+        if name in self.INGREDIENT_SHORT_NAMES:
+            return self.INGREDIENT_SHORT_NAMES[name]
+
         # Remove all parenthetical annotations (processing details, quantities, etc.)
         clean_name = re.sub(r'\s*\(.*?\)', '', name).strip()
+
+        # Remove " - NNL" colour/lovibond suffixes (e.g., "Caramel/Crystal Malt - 80L")
+        clean_name = re.sub(r'\s*-\s*\d+L$', '', clean_name).strip()
+
+        # Normalise "Caramel/Crystal" → "Crystal"
+        clean_name = re.sub(r'Caramel/Crystal', 'Crystal', clean_name)
+
+        # Remove " Flaked" processing descriptor
+        clean_name = re.sub(r'\s+Flaked$', '', clean_name).strip()
 
         return clean_name
 
@@ -340,6 +360,12 @@ class BreweryLabelGenerator:
         if current_line:
             lines.append(' '.join(current_line))
 
+        # Cap ingredient lines so ABV/lot always fit above the QR code
+        max_ingredient_lines = 4
+        if len(lines) > max_ingredient_lines:
+            lines = lines[:max_ingredient_lines]
+            lines[-1] = lines[-1].rstrip(',') + '…'
+
         x_offset = x + 5 * mm + label_width
         for i, line in enumerate(lines):
             if i == 0:
@@ -350,30 +376,28 @@ class BreweryLabelGenerator:
                 y_pos -= 2.5 * mm
                 c.drawString(x + 5 * mm, y_pos, line)
 
-        # ABV - more space before, bold label to match Ingredients
-        y_pos -= 4 * mm
+        # ABV and Lot anchored at fixed positions above the QR code
+        rounded_abv = round(float(self.abv) * 2) / 2
+        abv_y = y + 42 * mm
         c.setFillColor(self.NAVY_BLUE)
         c.setFont("Helvetica-Bold", 8)
         abv_label = "ABV: "
         abv_label_width = c.stringWidth(abv_label, "Helvetica-Bold", 8)
-        c.drawString(x + 5 * mm, y_pos, abv_label)
-
+        c.drawString(x + 5 * mm, abv_y, abv_label)
         c.setFillColor(self.DARK_GRAY)
         c.setFont("Helvetica", 7)
-        c.drawString(x + 5 * mm + abv_label_width, y_pos, f"{self.abv}%")
+        c.drawString(x + 5 * mm + abv_label_width, abv_y, f"{rounded_abv:.1f}%")
 
-        # Lot Number - if provided
         if self.lot_number:
-            y_pos -= 3 * mm
+            lot_y = y + 45 * mm
             c.setFillColor(self.NAVY_BLUE)
             c.setFont("Helvetica-Bold", 8)
             lot_label = "Lot: "
             lot_label_width = c.stringWidth(lot_label, "Helvetica-Bold", 8)
-            c.drawString(x + 5 * mm, y_pos, lot_label)
-
+            c.drawString(x + 5 * mm, lot_y, lot_label)
             c.setFillColor(self.DARK_GRAY)
             c.setFont("Helvetica", 7)
-            c.drawString(x + 5 * mm + lot_label_width, y_pos, self.lot_number)
+            c.drawString(x + 5 * mm + lot_label_width, lot_y, self.lot_number)
 
         # QR Code - use color from palette
         if self.QR_COLOR_MODE == 'cycle':
