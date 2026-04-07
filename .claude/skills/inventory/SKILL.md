@@ -338,16 +338,28 @@ Recipe needs 21g Citra:
 
 ## Cellar (Bottle Inventory)
 
-Tracks bottled homebrew inventory (see `notion.yaml` for database URL and ID):
-- **Category**: Beer, Mead, Ginger Beer, Other
-- **Style**: Beer style name
-- **Quantity**: Number of bottles
-- **Volume**: Bottle size (ml)
-- **ABV**: Alcohol percentage
-- **Dates**: Brew Date, Bottled Date, Best Before
-- **Status**: Conditioning, Ready, etc.
-- **Location**: Where stored
-- **Notes**: Tasting notes, etc.
+Tracks bottled homebrew inventory (see `notion.yaml` for database URL and ID).
+
+### REQUIRED: Cellar Entry Checklist
+
+When adding ANY entry to the cellar, you MUST collect and fill out ALL of the following. Ask the user if any are missing — do not leave them blank:
+
+| Field | Notes |
+|-------|-------|
+| `Name` | e.g., "LOT 103 – London Porter" |
+| `Category` | Beer, Mead, Ginger Beer, Other |
+| `Style` | e.g., "Porter", "IPA" |
+| `Lot Number` | e.g., "LOT 103" |
+| `Quantity` | Number of bottles |
+| `Volume (ml)` | e.g., 500 |
+| `ABV %` | Rounded to nearest 0.5% |
+| `Brew Date` | From brew log |
+| `Bottled Date` | Today's date |
+| `Best After` | Earliest drinkable date — for primed beer: bottled + 2 weeks; for mead: ask |
+| `Best Before` | Latest recommended date — typically 1 year for beer, longer for mead |
+| `Status` | Conditioning / Ready / Aging |
+| `Location` | Where physically stored, e.g., "Beer #2 box" — **always ask the user** |
+| `Notes` | Priming details, tasting notes, etc. |
 
 ## Naming Conventions
 
