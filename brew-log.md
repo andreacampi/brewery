@@ -33,6 +33,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ### Brew Log
 
+- **2026-04-19**: FG 1.00, fully fermented. Keg unable to reach target 5°C (current: 17.7°C). Plan: rack to larger bottles, cold crash in fridge, then prime and bottle into crown caps. Priming: 25g dextrose in 60ml water (~67ml solution) for 5.5L batch targeting ~2.4 vol CO₂ at 5°C — approx 6ml solution per 500ml bottle (11 bottles).
+
 - **2026-03-15**: Brew day. MiniBrew mash/boil/cool. Pitched WHC Blitz Lager (11g). Primary fermentation underway.
 
 ---
