@@ -497,42 +497,9 @@ Examples:
 
     args = parser.parse_args()
 
-    # Batch configuration
-    # Future: Could parse from brew-log.md automatically
-    batch_config = {
-        'navarino-road': {
-            'name': 'Navarino Road',
-            'style': 'Hibiscus Mead',
-            'recipe': 'recipes/hibiscus-mead.json',
-            'abv': '11.81',
-            'url': 'https://andreacampi.github.io/brewery/navarino-road/',
-            'lot': 'LOT 098',
-        },
-        'colvestone': {
-            'name': 'Colvestone',
-            'style': 'Blackberry Mead',
-            'recipe': 'recipes/blackberry-mead-2026-01.json',
-            'abv': '10.9',
-            'url': 'https://andreacampi.github.io/brewery/colvestone/',
-            'lot': 'LOT 100',
-        },
-        'broadway': {
-            'name': 'Broadway',
-            'style': 'American IPA',
-            'recipe': '.cache/recipes/1139286.json',
-            'abv': '6.01',
-            'url': 'https://andreacampi.github.io/brewery/broadway/',
-            'lot': 'LOT 102',
-        },
-        'middleton-road': {
-            'name': 'Middleton Road',
-            'style': 'English Porter',
-            'recipe': '.cache/recipes/691614.json',
-            'abv': '5.03',
-            'url': 'https://andreacampi.github.io/brewery/middleton-road/',
-            'lot': 'LOT 103',
-        },
-    }
+    batches_file = Path(__file__).parent / 'batches.json'
+    with open(batches_file) as f:
+        batch_config = json.load(f)
 
     config = batch_config.get(args.batch)
     if not config:
