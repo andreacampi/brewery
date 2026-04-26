@@ -4,10 +4,46 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 105: London Porter
+
+**Lot Number**: LOT 105
+**Street Name**: TBD
+**Style**: English Porter
+**Recipe**: `691614.json` (community — ScotBoy / John Finch)
+**Brewed**: 2026-04-19
+**Status**: Fermenting
+
+### Adjustments from Base Recipe
+- Grain substitution: Extra Pale Maris Otter (Crisp) instead of standard Maris Otter (pre-weighed grain bill)
+- Grain substitution: Heritage Crystal Malt instead of Caramel/Crystal 80L
+
+### Stats
+- **ABV**: 5.03%
+- **IBU**: 48
+- **OG**: 1.047
+- **FG**: 1.009
+- **Batch**: ~5.5L
+
+### Key Ingredients
+- Extra Pale Maris Otter (1200g)
+- Chocolate Malt (120g)
+- Heritage Crystal Malt (120g)
+- Wheat Flaked (60g)
+- Roasted Barley (60g)
+- Centennial (5g @ 90 min)
+- Willamette (8g @ 30 min, 12g @ 5 min)
+- Yeast: Mangrove Jacks M42 (4g)
+
+### Brew Log
+
+- **2026-04-19**: Brew day. MiniBrew mash/boil/cool. Pre-weighed grain bill used.
+
+---
+
 ## LOT 104: Münchner Helles
 
 **Lot Number**: LOT 104
-**Street Name**: TBD
+**Street Name**: Albion Drive
 **Style**: Munich Helles (Lager)
 **Recipe**: `recipes/munchner-helles-lot-104.json` (cloned from community 1322070, Mark)
 **Brewed**: 2026-03-15
