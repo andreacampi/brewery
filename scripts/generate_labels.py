@@ -126,7 +126,7 @@ class BreweryLabelGenerator:
     # Label dimensions (in points, 1mm = 2.834645669 points)
     LABEL_WIDTH = 40 * mm
     LABEL_HEIGHT = 60 * mm
-    MARGIN = 2 * mm  # Reduced from 5mm
+    MARGIN = 10 * mm  # Centers 4-col grid (4*40 + 3*10 = 190mm) on A4 (210mm)
     GAP = 10 * mm
     HEADER_HEIGHT = 8 * mm  # Reduced from 10mm
 
