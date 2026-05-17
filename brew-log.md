@@ -7,11 +7,12 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 ## LOT 105: London Porter
 
 **Lot Number**: LOT 105
-**Street Name**: TBD
+**Street Name**: Middleton Road
 **Style**: English Porter
 **Recipe**: `691614.json` (community — ScotBoy / John Finch)
 **Brewed**: 2026-04-19
-**Status**: Fermenting
+**Bottled**: 2026-05-17
+**Status**: Bottled
 
 ### Adjustments from Base Recipe
 - Grain substitution: Extra Pale Maris Otter (Crisp) instead of standard Maris Otter (pre-weighed grain bill)
@@ -37,6 +38,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 ### Brew Log
 
 - **2026-04-19**: Brew day. MiniBrew mash/boil/cool. Pre-weighed grain bill used.
+- **2026-05-17**: Bottled. 6 × 500ml crown bottles (3L), primed for ~2.0 vol CO₂ (English Porter), remainder consumed fresh from keg.
 
 ---
 
@@ -121,9 +123,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Style**: American IPA
 **Recipe**: `1139286.json` (MiniBrew community, Robert Hilbrands)
 **Brewed**: 2026-02-21
-**Status**: Gone
+**Status**: Bottled
 **Bottled**: 2026-03-07 (3L → 6 × 500ml crown bottles; remainder consumed fresh from keg)
-**Finished**: 2026-03-14
 
 ### Adjustments from Base Recipe
 - Grain substitution: Crisp Best Ale (1815g) instead of generic Pale Malt
@@ -149,7 +150,7 @@ A single-malt, single-hop IPA showcasing Citra from grain to glass. Clean Crisp 
 
 - **2026-02-21**: Brew day. MiniBrew mash/boil/cool. Pitched WHC Bond (11g, expired Jun 2025). Primary fermentation @ 19°C.
 - **2026-03-07**: Tasting — balanced hop character, balanced bitterness, light-bodied and easy drinking. Nice light colour. One of the better recipes. Bottled 3L (6 × 500ml); remainder consumed fresh from keg. Priming: 16g dextrose dissolved in 60ml boiled water (~11ml solution per bottle), targeting ~2.4 vol CO₂ at 14°C.
-- **2026-03-14**: All consumed. Verdict: good, tasty, easy drinking.
+- **2026-03-14**: Tasting — good, tasty, easy drinking. (Note: 6 crown bottles survive in Beer box #2.)
 
 ---
 
