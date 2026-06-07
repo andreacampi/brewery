@@ -4,7 +4,7 @@ Bottle Label Generator for Dalston Rooftop Brewery
 
 Generates front and back bottle labels:
 - Front: street name stamped on template PDF, 2 copies per A4 sheet
-- Back: 4cm x 6cm labels with ingredients, ABV, and QR code, 16 per A4 sheet
+- Back: 4cm x 8cm labels with ingredients, ABV, and QR code, 12 per A4 sheet
 """
 
 import json
@@ -125,9 +125,10 @@ class BreweryLabelGenerator:
 
     # Label dimensions (in points, 1mm = 2.834645669 points)
     LABEL_WIDTH = 40 * mm
-    LABEL_HEIGHT = 60 * mm
+    LABEL_HEIGHT = 80 * mm
     MARGIN = 10 * mm  # Centers 4-col grid (4*40 + 3*10 = 190mm) on A4 (210mm)
-    GAP = 10 * mm
+    HGAP = 10 * mm
+    VGAP = 10 * mm
     HEADER_HEIGHT = 8 * mm  # Reduced from 10mm
 
     def __init__(self, batch_name, style, recipe_path, abv, url, lot_number=None):
@@ -378,7 +379,7 @@ class BreweryLabelGenerator:
             lines.append(' '.join(current_line))
 
         # Cap ingredient lines so ABV/lot always fit above the QR code
-        max_ingredient_lines = 4
+        max_ingredient_lines = 6
         if len(lines) > max_ingredient_lines:
             lines = lines[:max_ingredient_lines]
             lines[-1] = lines[-1].rstrip(',') + '…'
@@ -442,9 +443,9 @@ class BreweryLabelGenerator:
         # Draw page header
         self.draw_page_header(c)
 
-        # Calculate grid layout (4 columns x 4 rows)
+        # Calculate grid layout (4 columns x 3 rows)
         labels_per_row = 4
-        labels_per_col = 4
+        labels_per_col = 3
 
         # Adjust top margin to account for header
         top_margin = self.MARGIN + self.HEADER_HEIGHT
@@ -455,8 +456,8 @@ class BreweryLabelGenerator:
                 if label_count >= num_labels:
                     break
 
-                x = self.MARGIN + col * (self.LABEL_WIDTH + self.GAP)
-                y = height - top_margin - (row + 1) * self.LABEL_HEIGHT - row * self.GAP
+                x = self.MARGIN + col * (self.LABEL_WIDTH + self.HGAP)
+                y = height - top_margin - (row + 1) * self.LABEL_HEIGHT - row * self.VGAP
 
                 self.draw_label(c, x, y, label_index=label_count)
                 label_count += 1
@@ -486,8 +487,8 @@ Examples:
     parser.add_argument(
         '--labels',
         type=int,
-        default=16,
-        help='Number of labels to generate (default: 16, max: 16)'
+        default=12,
+        help='Number of labels to generate (default: 12, max: 12)'
     )
     parser.add_argument(
         '--lot',
@@ -508,8 +509,8 @@ Examples:
         return 1
 
     # Validate label count
-    if args.labels < 1 or args.labels > 16:
-        print("Error: Labels must be between 1 and 16")
+    if args.labels < 1 or args.labels > 12:
+        print("Error: Labels must be between 1 and 12")
         return 1
 
     # Set up paths
