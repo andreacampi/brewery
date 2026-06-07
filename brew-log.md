@@ -4,6 +4,46 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 106: Ancient Orange Mead
+
+**Lot Number**: LOT 106
+**Street Name**: TBD
+**Style**: Traditional Mead
+**Recipe**: `recipes/ancient-orange-mead-2026-06.json` (cloned from `ancient-orange-mead.json`, closer to Joe's original)
+**Brewed**: 2026-06-07
+**Status**: Fermenting
+
+### Adjustments from Base Recipe
+- 2 medium oranges instead of 1 (more citrus character)
+- Added 2 cloves and 1/4 tsp ground allspice (not in recipe)
+- Added ~25 raisins as nutrient source (Joe's tradition; not yet codified in recipe file)
+
+### Pitch
+
+Second attempt at Joe's Ancient Orange, staying closer to the original spirit: no bentonite, oranges-only (no clementines), raisins as natural yeast nutrient, and Joe's "leave it alone for 2 months and let citrus pectin self-clear" approach. Spiced up slightly with 2 cloves and a touch of allspice on top of the cinnamon stick.
+
+### Stats
+- **ABV**: ~14.4% (revised estimate from measured OG)
+- **IBU**: 0
+- **OG**: 1.110 (measured — target was 1.150; lower because 3L was water volume, not total must volume)
+- **FG**: ~1.000 (estimated — EC-1118 will finish dry)
+- **Batch**: ~3.9L
+
+### Key Ingredients
+- Honey (1360g)
+- Oranges (2 medium, chopped with zest)
+- Raisins (~25)
+- Cinnamon stick (~10cm)
+- Cloves (2)
+- Ground allspice (1/4 tsp / good pinch)
+- Yeast: Lalvin EC-1118 (5g, 4 months expired — proofed successfully before pitching)
+
+### Brew Log
+
+- **2026-06-07**: Brewed. Mixed must with 1360g honey, ~3L water, ~25 raisins, 1 cinnamon stick (~10cm), 2 cloves, 1/4 tsp ground allspice, 2 medium oranges (chopped with zest). EC-1118 (4 months past expiry) proofed strongly within 15 min; pitched as active slurry. OG 1.110 (lower than 1.150 target — 3L was water volume, not total). Primary fermentation underway.
+
+---
+
 ## LOT 105: London Porter
 
 **Lot Number**: LOT 105
@@ -388,7 +428,7 @@ A refreshing citrus mead showcasing the natural sweetness of honey brightened wi
 **Lot Number**: LOT 096
 **Street Name**: TBD
 **Style**: Traditional Mead
-**Recipe**: `ancient-orange-mead.json` (custom, Joe's Ancient Orange)
+**Recipe**: `recipes/ancient-orange-mead-lot-096.json` (custom, original Joe's Ancient Orange clone — historical, since superseded by `ancient-orange-mead.json`)
 **Brewed**: 2025-02-23
 **Status**: Bottled (2025-05-18), consumed
 

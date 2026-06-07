@@ -1,11 +1,11 @@
 {
-  "id": "ancient-orange-mead",
+  "id": "ancient-orange-mead-lot-096",
   "beer_id": null,
   "shared": false,
   "beer_name": "Ancient Orange Mead",
-  "public_note": "Based on Joe's Ancient Orange recipe.",
-  "private_note": "Recipe: https://www.homebrewtalk.com/threads/joes-ancient-orange-mead.49106/\n\nLeave undisturbed for ~2 months — citrus pectin self-clears the mead, no fining agents needed.\n\nIMPORTANT — water volume: the `water_amount` field (3.00 L) is TOTAL must volume, NOT water added on top of the honey. 1.36kg honey occupies ~1L of volume, so add ~2L of water and top up to 3L total to hit OG 1.150. Adding 3L of water on top of the honey dilutes to ~3.9L must and OG ~1.110.",
-  "times_brewed": 0,
+  "public_note": "Based on Joe's Ancient Orange recipe",
+  "private_note": "Recipe: https://www.homebrewtalk.com/threads/joes-ancient-orange-mead.49106/",
+  "times_brewed": 1,
   "serving_temperature": "10.00",
   "water_amount": "3.00",
   "kettle_water": "3.00",
@@ -33,11 +33,26 @@
         {
           "ingredient_id": null,
           "ingredient_type": "ADJ",
-          "ingredient_name": "Orange (medium, chopped with zest)",
+          "ingredient_name": "Orange (half)",
           "ingredient_dry_yield": null,
           "ingredient_moisture": null,
           "ingredient_attenuation": null,
-          "amount": "1.00",
+          "amount": "0.50",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Clementines",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "3.00",
           "duration": null,
           "addition_step": "0-0",
           "alpha_acid": null,
@@ -58,6 +73,21 @@
           "alpha_acid": null,
           "srm": null,
           "amount_units": "UNIT",
+          "fermentable_type": null
+        },
+        {
+          "ingredient_id": null,
+          "ingredient_type": "ADJ",
+          "ingredient_name": "Calcium Bentonite",
+          "ingredient_dry_yield": null,
+          "ingredient_moisture": null,
+          "ingredient_attenuation": null,
+          "amount": "3.00",
+          "duration": null,
+          "addition_step": "0-0",
+          "alpha_acid": null,
+          "srm": null,
+          "amount_units": "GR",
           "fermentable_type": null
         }
       ],
@@ -80,10 +110,10 @@
         {
           "ingredient_id": null,
           "ingredient_type": "YEAST",
-          "ingredient_name": "Lalvin EC-1118",
+          "ingredient_name": "Mead Yeast",
           "ingredient_dry_yield": null,
           "ingredient_moisture": null,
-          "ingredient_attenuation": "100.00",
+          "ingredient_attenuation": "90.00",
           "amount": "5.00",
           "duration": 0.0,
           "addition_step": null,
@@ -95,14 +125,14 @@
       ],
       "steps": [
         {
-          "duration": 60.0,
+          "duration": 90.0,
           "temperature": "18.0",
           "end_temperature": "18.0",
           "order": 0
         }
       ],
       "order": 0,
-      "name": "Primary fermentation (leave undisturbed, let citrus pectin self-clear)",
+      "name": "Primary fermentation",
       "pressure_relief": 0
     }
   ],
@@ -118,18 +148,18 @@
   "kcal": "240.00",
   "og": "1.150",
   "fg": "1.0025",
-  "modified_timestamp": 1717718400,
+  "modified_timestamp": 1708732800,
   "brewable": true,
   "beer": {
     "id": null,
-    "created": "2026-06-07T00:00:00Z",
-    "modified": "2026-06-07T00:00:00Z",
+    "created": "2025-02-23T00:00:00Z",
+    "modified": "2025-02-23T00:00:00Z",
     "name": "Ancient Orange Mead",
     "style": {
       "id": null,
       "name": "Traditional Mead",
-      "blurb": "Classic honey wine with orange and cinnamon",
-      "description": "A traditional mead based on Joe's Ancient Orange recipe. One whole orange (chopped with zest) and warming cinnamon ferment alongside honey. Left undisturbed for ~2 months; citrus pectin self-clears the mead — no fining agents needed.",
+      "blurb": "Classic honey wine with citrus and spice",
+      "description": "A traditional mead based on Joe's Ancient Orange recipe, featuring whole citrus fruit with zest and warming cinnamon spice.",
       "category": {
         "id": null,
         "created": null,
