@@ -33,6 +33,7 @@
 | Broadway | American IPA |
 | Middleton Road | English Porter |
 | Albion Drive | Munich Helles (Lager) |
+| Duncan Road | New England IPA |
 
 **Usage**: Street names identify the brew style, not individual batches. Multiple brews of the same style share the same street name (e.g., all citrus meads are "Wilton Way"), differentiated by lot numbers.
 

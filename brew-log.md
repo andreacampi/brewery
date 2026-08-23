@@ -4,6 +4,40 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 107: Galaxy of shambolic
+
+**Lot Number**: LOT 107
+**Street Name**: Duncan Road
+**Style**: New England IPA
+**Recipe**: `1329425.json` (community — Galaxy of shambolic)
+**Brewed**: 2026-08-22
+**Status**: Fermenting
+
+### Adjustments from Base Recipe
+- Grain substitution: split base malt — 442g Extra Pale Malt (using up expiring stock) + 1058g Crisp Best Pale Ale Malt (instead of 1500g Extra Pale Maris Otter)
+- Grain substitution: Best Caramel Pils instead of cara-pils/dextrine (150g)
+
+### Stats
+- **ABV**: 5.57%
+- **IBU**: 18
+- **SRM**: 4
+- **OG**: 1.052
+- **FG**: 1.010
+- **Batch**: ~5.5L
+
+### Key Ingredients
+- Extra Pale Malt (442g) + Crisp Best Pale Ale Malt (1058g)
+- Best Caramel Pils (150g)
+- Galaxy: 6g @ 10 min, 12g @ flameout
+- Galaxy dry hop: 20g (day 4)
+- Yeast: Lallemand New England (11g)
+
+### Brew Log
+
+- **2026-08-22**: Brew day. MiniBrew mash/boil/cool. Pitched Lallemand New England (11g). Primary fermentation @ 25°C underway.
+
+---
+
 ## LOT 106: Ancient Orange Mead
 
 **Lot Number**: LOT 106
