@@ -318,7 +318,7 @@ class BrewSheetGenerator:
             lines.append("**Dry Hops (in order):**")
             lines.append("")
             for i, hop in enumerate(dry_hops, 1):
-                lines.append(f"- Slot {i}: {hop['ingredient_name']}: {self._format_amount(hop)}")
+                lines.append(f"{i}. {hop['ingredient_name']}: {self._format_amount(hop)}")
 
         # Yeast
         lines.append("")
