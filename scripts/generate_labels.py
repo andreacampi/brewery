@@ -170,12 +170,8 @@ class BreweryLabelGenerator:
                 if self._should_include_ingredient(name):
                     ingredients.append(self._clean_ingredient_name(name))
 
-        # Extract from fermenting section (yeast)
-        for ferment in recipe.get('fermenting', []):
-            for yeast in ferment.get('yeast', []):
-                name = yeast['ingredient_name']
-                if self._should_include_ingredient(name):
-                    ingredients.append(self._clean_ingredient_name(name))
+        # Yeast is always excluded from labels (marketing rule), so the
+        # recipe's yeast entries are intentionally not extracted here.
 
         # Extract hops from boiling section (deduplicated, grouped as "X and Y hops")
         seen_hops = set()
