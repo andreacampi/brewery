@@ -38,5 +38,13 @@
     "abv": "4.67",
     "url": "https://andreacampi.github.io/brewery/albion-drive/",
     "lot": "LOT 104"
+  },
+  "ancient-orange-mead": {
+    "name": "Wilton Way",
+    "style": "Citrus Mead",
+    "recipe": "recipes/ancient-orange-mead-2026-06.json",
+    "abv": "14.4",
+    "url": "https://andreacampi.github.io/brewery/ancient-orange-mead/",
+    "lot": "LOT 106"
   }
 }

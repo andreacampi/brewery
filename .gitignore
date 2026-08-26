@@ -6,6 +6,7 @@ fetched/
 .claude/settings.local.json
 venv/
 output/
+__pycache__/
 
 # macOS
 .DS_Store
