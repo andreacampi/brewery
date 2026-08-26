@@ -35,17 +35,18 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 ### Brew Log
 
 - **2026-08-22**: Brew day. MiniBrew mash/boil/cool. Pitched Lallemand New England (11g). Primary fermentation @ 25°C underway.
+- **2026-08-26**: Added 20g Galaxy dry hop (day 5, one day late) in a muslin bag. Bagged to avoid clogging keg lines on dispense (cf. LOT 101).
 
 ---
 
 ## LOT 106: Ancient Orange Mead
 
 **Lot Number**: LOT 106
-**Street Name**: TBD
+**Street Name**: Wilton Way
 **Style**: Traditional Mead
 **Recipe**: `recipes/ancient-orange-mead-2026-06.json` (cloned from `ancient-orange-mead.json`, closer to Joe's original)
 **Brewed**: 2026-06-07
-**Status**: Fermenting
+**Status**: Fermentation complete — ready to rack
 
 ### Adjustments from Base Recipe
 - 2 medium oranges instead of 1 (more citrus character)
@@ -57,10 +58,10 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 Second attempt at Joe's Ancient Orange, staying closer to the original spirit: no bentonite, oranges-only (no clementines), raisins as natural yeast nutrient, and Joe's "leave it alone for 2 months and let citrus pectin self-clear" approach. Spiced up slightly with 2 cloves and a touch of allspice on top of the cinnamon stick.
 
 ### Stats
-- **ABV**: ~14.4% (revised estimate from measured OG)
+- **ABV**: 14.4% (confirmed from measured OG 1.110 → FG 1.000)
 - **IBU**: 0
 - **OG**: 1.110 (measured — target was 1.150; lower because 3L was water volume, not total must volume)
-- **FG**: ~1.000 (estimated — EC-1118 will finish dry)
+- **FG**: 1.000 (measured 2026-08-24 — finished dry)
 - **Batch**: ~3.9L
 
 ### Key Ingredients
@@ -75,6 +76,7 @@ Second attempt at Joe's Ancient Orange, staying closer to the original spirit: n
 ### Brew Log
 
 - **2026-06-07**: Brewed. Mixed must with 1360g honey, ~3L water, ~25 raisins, 1 cinnamon stick (~10cm), 2 cloves, 1/4 tsp ground allspice, 2 medium oranges (chopped with zest). EC-1118 (4 months past expiry) proofed strongly within 15 min; pitched as active slurry. OG 1.110 (lower than 1.150 target — 3L was water volume, not total). Primary fermentation underway.
+- **2026-08-24**: FG 1.000 (finished dry, as expected from EC-1118). ABV 14.4%. Fermentation complete after ~11 weeks following Joe's leave-it-alone approach. Clarified well via citrus pectin self-clearing (no bentonite). Tasted dry but pleasantly balanced — no backsweetening. Ready to rack as-is.
 
 ---
 
@@ -460,7 +462,7 @@ A refreshing citrus mead showcasing the natural sweetness of honey brightened wi
 ## LOT 096: Ancient Orange Mead
 
 **Lot Number**: LOT 096
-**Street Name**: TBD
+**Street Name**: Wilton Way
 **Style**: Traditional Mead
 **Recipe**: `recipes/ancient-orange-mead-lot-096.json` (custom, original Joe's Ancient Orange clone — historical, since superseded by `ancient-orange-mead.json`)
 **Brewed**: 2025-02-23
