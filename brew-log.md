@@ -36,6 +36,7 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 - **2026-08-22**: Brew day. MiniBrew mash/boil/cool. Pitched Lallemand New England (11g). Primary fermentation @ 25°C underway.
 - **2026-08-26**: Added 20g Galaxy dry hop (day 5, one day late) in a muslin bag. Bagged to avoid clogging keg lines on dispense (cf. LOT 101).
+- **2026-08-27**: Session stalled at the primary→secondary airlock gate (never advanced during the multi-day MiniBrew API outage; ~3 days extra at 25°C). Airlock/pressurizer step completed; MiniBrew support force-transitioned the session. Now in secondary, cooling 18°C → 10°C target. Bottling pushed ~3 days later.
 
 ---
 
