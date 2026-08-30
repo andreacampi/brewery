@@ -47,7 +47,8 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 **Style**: Traditional Mead
 **Recipe**: `recipes/ancient-orange-mead-2026-06.json` (cloned from `ancient-orange-mead.json`, closer to Joe's original)
 **Brewed**: 2026-06-07
-**Status**: Fermentation complete — ready to rack
+**Bottled**: 2026-08-30
+**Status**: Bottled
 
 ### Adjustments from Base Recipe
 - 2 medium oranges instead of 1 (more citrus character)
@@ -78,6 +79,7 @@ Second attempt at Joe's Ancient Orange, staying closer to the original spirit: n
 
 - **2026-06-07**: Brewed. Mixed must with 1360g honey, ~3L water, ~25 raisins, 1 cinnamon stick (~10cm), 2 cloves, 1/4 tsp ground allspice, 2 medium oranges (chopped with zest). EC-1118 (4 months past expiry) proofed strongly within 15 min; pitched as active slurry. OG 1.110 (lower than 1.150 target — 3L was water volume, not total). Primary fermentation underway.
 - **2026-08-24**: FG 1.000 (finished dry, as expected from EC-1118). ABV 14.4%. Fermentation complete after ~11 weeks following Joe's leave-it-alone approach. Clarified well via citrus pectin self-clearing (no bentonite). Tasted dry but pleasantly balanced — no backsweetening. Ready to rack as-is.
+- **2026-08-30**: Bottled 6 × 500ml crown bottles, labeled as Wilton Way (Citrus Mead). Stored on a shelf.
 
 ---
 
