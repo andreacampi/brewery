@@ -4,6 +4,42 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 
 ---
 
+## LOT 108: London Porter
+
+**Lot Number**: LOT 108
+**Street Name**: Middleton Road
+**Style**: English Porter
+**Recipe**: `691614.json` (community — ScotBoy / John Finch)
+**Brewed**: 2026-09-12
+**Status**: Fermenting
+
+### Adjustments from Base Recipe
+- Grain substitution: Crisp Best (Pale) Ale Malt instead of Maris Otter (1200g)
+- Grain substitution: Heritage Crystal Malt instead of Caramel/Crystal 80L (120g)
+
+### Stats
+- **ABV**: 5.03%
+- **IBU**: 48
+- **OG**: 1.047
+- **FG**: 1.009
+- **Batch**: ~5.5L
+
+### Key Ingredients
+- Crisp Best (Pale) Ale Malt (1200g)
+- Chocolate Malt (120g)
+- Heritage Crystal Malt (120g)
+- Flaked Wheat (60g)
+- Roasted Barley (60g)
+- Centennial (5g @ 90 min)
+- Willamette (8g @ 30 min, 12g @ 5 min)
+- Yeast: Mangrove Jacks M42 (4g)
+
+### Brew Log
+
+- **2026-09-12**: Brew day. MiniBrew mash/boil/cool. Pitched Mangrove Jacks M42 (4g). Primary fermentation @ 20°C underway.
+
+---
+
 ## LOT 107: Galaxy of shambolic
 
 **Lot Number**: LOT 107
