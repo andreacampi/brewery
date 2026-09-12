@@ -32,11 +32,11 @@ Record of all brews at Dalston Rooftop Brewery, tracked by lot number.
 - Roasted Barley (60g)
 - Centennial (5g @ 90 min)
 - Willamette (8g @ 30 min, 12g @ 5 min)
-- Yeast: Mangrove Jacks M42 (4g)
+- Yeast: Mangrove Jacks M36 Liberty Bell Ale
 
 ### Brew Log
 
-- **2026-09-12**: Brew day. MiniBrew mash/boil/cool. Pitched Mangrove Jacks M42 (4g). Primary fermentation @ 20°C underway.
+- **2026-09-12**: Brew day. MiniBrew mash/boil/cool. Pitched Mangrove Jacks M36 Liberty Bell Ale (substituted for M42 — not in stock). Primary fermentation @ 20°C underway.
 
 ---
 
