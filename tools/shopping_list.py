@@ -117,21 +117,9 @@ class Tools:
             return f"Error adding {name}: {resp.status_code} — {resp.text}"
         return f"Added {self._format_quantity(quantity, unit)} {name}{f' ({notes})' if notes else ''}"
 
-    async def shopping_list_add(self, name: str, quantity: float, unit: str, notes: str = "") -> str:
+    async def shopping_list_add(self, items: list[dict]) -> str:
         """
-        Add an ingredient to the shopping list. Merges with an existing pending entry if one exists.
-        :param name: Ingredient name (e.g. "Crisp Best Pale Ale Malt")
-        :param quantity: Numeric quantity (e.g. 100, 1, 20)
-        :param unit: Unit of measure (e.g. "g", "kg", "packet")
-        :param notes: Context (e.g. "for London Porter", "general restocking")
-        :return: Confirmation of what was added or merged
-        """
-        async with httpx.AsyncClient() as client:
-            return await self._add_one(client, name, quantity, unit, notes)
-
-    async def shopping_list_add_many(self, items: list[dict]) -> str:
-        """
-        Add multiple ingredients to the shopping list in one call. Each item merges with existing pending entries.
+        Add one or more ingredients to the shopping list. Merges with existing pending entries.
         :param items: List of items, each with keys: name (str), quantity (float), unit (str), and optional notes (str). Example: [{"name": "Rice Hulls", "quantity": 100, "unit": "g", "notes": "for Kveik IPA"}, {"name": "Dextrose", "quantity": 50, "unit": "g"}]
         :return: Summary of all additions
         """
