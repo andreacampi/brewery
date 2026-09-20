@@ -65,6 +65,58 @@ class Tools:
             return f"{int(qty)}{unit}"
         return f"{qty:.1f}{unit}"
 
+    async def _add_one(self, client: httpx.AsyncClient, name: str, quantity: float, unit: str, notes: str) -> str:
+        existing = await self._find_pending_by_name(client, name)
+
+        if existing:
+            props = existing["properties"]
+            old_qty = props.get("Quantity", {}).get("number") or 0
+            old_unit = (props.get("Unit", {}).get("select") or {}).get("name", "")
+            old_notes = self._extract_rich_text(props.get("Notes", {}).get("rich_text", []))
+
+            converted = self._normalize_quantity(quantity, unit, old_unit)
+            if converted is None:
+                return f"Cannot merge: existing {name} is in {old_unit}, new amount is in {unit}"
+
+            new_qty = old_qty + converted
+            new_notes = f"{old_notes}; {notes}" if old_notes and notes else (old_notes or notes)
+
+            update_props = {
+                "Quantity": {"number": new_qty},
+            }
+            if new_notes:
+                update_props["Notes"] = {"rich_text": [{"text": {"content": new_notes}}]}
+
+            resp = await client.patch(
+                f"{self.NOTION_API}/pages/{existing['id']}",
+                headers=self._headers(),
+                json={"properties": update_props},
+            )
+            if resp.status_code != 200:
+                return f"Error merging {name}: {resp.status_code} — {resp.text}"
+            return f"Merged with existing: {name} now {self._format_quantity(new_qty, old_unit)}"
+
+        properties = {
+            "Name": {"title": [{"text": {"content": name}}]},
+            "Quantity": {"number": quantity},
+            "Unit": {"select": {"name": unit}},
+            "Done": {"checkbox": False},
+        }
+        if notes:
+            properties["Notes"] = {"rich_text": [{"text": {"content": notes}}]}
+
+        resp = await client.post(
+            f"{self.NOTION_API}/pages",
+            headers=self._headers(),
+            json={
+                "parent": {"database_id": self.valves.database_id},
+                "properties": properties,
+            },
+        )
+        if resp.status_code != 200:
+            return f"Error adding {name}: {resp.status_code} — {resp.text}"
+        return f"Added {self._format_quantity(quantity, unit)} {name}{f' ({notes})' if notes else ''}"
+
     async def shopping_list_add(self, name: str, quantity: float, unit: str, notes: str = "") -> str:
         """
         Add an ingredient to the shopping list. Merges with an existing pending entry if one exists.
@@ -75,56 +127,26 @@ class Tools:
         :return: Confirmation of what was added or merged
         """
         async with httpx.AsyncClient() as client:
-            existing = await self._find_pending_by_name(client, name)
+            return await self._add_one(client, name, quantity, unit, notes)
 
-            if existing:
-                props = existing["properties"]
-                old_qty = props.get("Quantity", {}).get("number") or 0
-                old_unit = (props.get("Unit", {}).get("select") or {}).get("name", "")
-                old_notes = self._extract_rich_text(props.get("Notes", {}).get("rich_text", []))
-
-                converted = self._normalize_quantity(quantity, unit, old_unit)
-                if converted is None:
-                    return f"Cannot merge: existing {name} is in {old_unit}, new amount is in {unit}"
-
-                new_qty = old_qty + converted
-                new_notes = f"{old_notes}; {notes}" if old_notes and notes else (old_notes or notes)
-
-                update_props = {
-                    "Quantity": {"number": new_qty},
-                }
-                if new_notes:
-                    update_props["Notes"] = {"rich_text": [{"text": {"content": new_notes}}]}
-
-                resp = await client.patch(
-                    f"{self.NOTION_API}/pages/{existing['id']}",
-                    headers=self._headers(),
-                    json={"properties": update_props},
+    async def shopping_list_add_many(self, items: list[dict]) -> str:
+        """
+        Add multiple ingredients to the shopping list in one call. Each item merges with existing pending entries.
+        :param items: List of items, each with keys: name (str), quantity (float), unit (str), and optional notes (str). Example: [{"name": "Rice Hulls", "quantity": 100, "unit": "g", "notes": "for Kveik IPA"}, {"name": "Dextrose", "quantity": 50, "unit": "g"}]
+        :return: Summary of all additions
+        """
+        results = []
+        async with httpx.AsyncClient() as client:
+            for item in items:
+                result = await self._add_one(
+                    client,
+                    item["name"],
+                    item["quantity"],
+                    item["unit"],
+                    item.get("notes", ""),
                 )
-                if resp.status_code != 200:
-                    return f"Error merging {name}: {resp.status_code} — {resp.text}"
-                return f"Merged with existing: {name} now {self._format_quantity(new_qty, old_unit)}"
-
-            properties = {
-                "Name": {"title": [{"text": {"content": name}}]},
-                "Quantity": {"number": quantity},
-                "Unit": {"select": {"name": unit}},
-                "Done": {"checkbox": False},
-            }
-            if notes:
-                properties["Notes"] = {"rich_text": [{"text": {"content": notes}}]}
-
-            resp = await client.post(
-                f"{self.NOTION_API}/pages",
-                headers=self._headers(),
-                json={
-                    "parent": {"database_id": self.valves.database_id},
-                    "properties": properties,
-                },
-            )
-            if resp.status_code != 200:
-                return f"Error adding {name}: {resp.status_code} — {resp.text}"
-            return f"Added {self._format_quantity(quantity, unit)} {name}{f' ({notes})' if notes else ''}"
+                results.append(result)
+        return "\n".join(results)
 
     async def shopping_list_get(self) -> str:
         """
