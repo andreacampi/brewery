@@ -3,12 +3,15 @@ title: Shopping List
 author: Andrea Campi
 description: Manage the brewery shopping list in Notion. Add ingredients, check pending items, and mark items as ordered.
 requirements: httpx
-version: 1.0.0
+version: 1.1.0
 """
 
 import httpx
 from pydantic import BaseModel, Field
 from typing import Optional
+
+
+UNIT_TO_GRAMS = {"g": 1, "kg": 1000}
 
 
 class Tools:
@@ -48,11 +51,26 @@ class Tools:
         results = resp.json().get("results", [])
         return results[0] if results else None
 
-    async def shopping_list_add(self, name: str, amount: str, notes: str = "") -> str:
+    @staticmethod
+    def _normalize_quantity(qty: float, unit: str, target_unit: str) -> Optional[float]:
+        if unit == target_unit:
+            return qty
+        if unit in UNIT_TO_GRAMS and target_unit in UNIT_TO_GRAMS:
+            return qty * UNIT_TO_GRAMS[unit] / UNIT_TO_GRAMS[target_unit]
+        return None
+
+    @staticmethod
+    def _format_quantity(qty: float, unit: str) -> str:
+        if qty == int(qty):
+            return f"{int(qty)}{unit}"
+        return f"{qty:.1f}{unit}"
+
+    async def shopping_list_add(self, name: str, quantity: float, unit: str, notes: str = "") -> str:
         """
         Add an ingredient to the shopping list. Merges with an existing pending entry if one exists.
         :param name: Ingredient name (e.g. "Crisp Best Pale Ale Malt")
-        :param amount: Quantity with unit (e.g. "100g", "1 packet", "20kg")
+        :param quantity: Numeric quantity (e.g. 100, 1, 20)
+        :param unit: Unit of measure (e.g. "g", "kg", "packet")
         :param notes: Context (e.g. "for London Porter", "general restocking")
         :return: Confirmation of what was added or merged
         """
@@ -61,14 +79,19 @@ class Tools:
 
             if existing:
                 props = existing["properties"]
-                old_amount = self._extract_rich_text(props.get("Amount", {}).get("rich_text", []))
+                old_qty = props.get("Quantity", {}).get("number") or 0
+                old_unit = (props.get("Unit", {}).get("select") or {}).get("name", "")
                 old_notes = self._extract_rich_text(props.get("Notes", {}).get("rich_text", []))
 
-                new_amount = f"{old_amount} + {amount}" if old_amount else amount
+                converted = self._normalize_quantity(quantity, unit, old_unit)
+                if converted is None:
+                    return f"Cannot merge: existing {name} is in {old_unit}, new amount is in {unit}"
+
+                new_qty = old_qty + converted
                 new_notes = f"{old_notes}; {notes}" if old_notes and notes else (old_notes or notes)
 
                 update_props = {
-                    "Amount": {"rich_text": [{"text": {"content": new_amount}}]},
+                    "Quantity": {"number": new_qty},
                 }
                 if new_notes:
                     update_props["Notes"] = {"rich_text": [{"text": {"content": new_notes}}]}
@@ -80,11 +103,12 @@ class Tools:
                 )
                 if resp.status_code != 200:
                     return f"Error merging {name}: {resp.status_code} — {resp.text}"
-                return f"Merged with existing: {name} now {new_amount}"
+                return f"Merged with existing: {name} now {self._format_quantity(new_qty, old_unit)}"
 
             properties = {
                 "Name": {"title": [{"text": {"content": name}}]},
-                "Amount": {"rich_text": [{"text": {"content": amount}}]},
+                "Quantity": {"number": quantity},
+                "Unit": {"select": {"name": unit}},
                 "Done": {"checkbox": False},
             }
             if notes:
@@ -100,7 +124,7 @@ class Tools:
             )
             if resp.status_code != 200:
                 return f"Error adding {name}: {resp.status_code} — {resp.text}"
-            return f"Added {amount} {name}{f' ({notes})' if notes else ''}"
+            return f"Added {self._format_quantity(quantity, unit)} {name}{f' ({notes})' if notes else ''}"
 
     async def shopping_list_get(self) -> str:
         """
@@ -123,14 +147,15 @@ class Tools:
         if not results:
             return "Shopping list is empty — nothing to order."
 
-        lines = ["| Ingredient | Amount | Notes |"]
-        lines.append("|------------|--------|-------|")
+        lines = ["| Ingredient | Quantity | Notes |"]
+        lines.append("|------------|----------|-------|")
         for page in results:
             props = page["properties"]
             name = self._extract_title(props)
-            amount = self._extract_rich_text(props.get("Amount", {}).get("rich_text", []))
+            qty = props.get("Quantity", {}).get("number") or 0
+            unit = (props.get("Unit", {}).get("select") or {}).get("name", "")
             notes = self._extract_rich_text(props.get("Notes", {}).get("rich_text", []))
-            lines.append(f"| {name} | {amount} | {notes} |")
+            lines.append(f"| {name} | {self._format_quantity(qty, unit)} | {notes} |")
 
         return "\n".join(lines)
 
